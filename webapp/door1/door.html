@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="http://code.jquery.com/jquery-latest.js"></script> 
+    <script type="text/javascript" src="luna.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bx-user icon'></i>
+            <div class="logo_name">XXX님</div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <button id="menu_1">
+                    <i class='bx bx-bell'></i>
+                    <span class="links_name">현관</span>
+                </button>
+                <span class="tooltip">현관</span>
+            </li>
+            <li>
+                <button id="menu_2">
+                    <i class='bx bx-voicemail'></i>
+                    <span class="links_name">음성메세지</span>
+                </button>
+                <span class="tooltip">음성메세지</span>
+            </li>
+            <li>
+                <button id="menu_3">
+                    <i class='bx bx-image-alt' ></i>
+                    <span class="links_name">방문자</span>
+                </button>
+                <span class="tooltip">방문자</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <div class="name_job">
+                        <div class="name"></div>
+                        <div class="job"></div>
+                    </div>
+                </div>
+                <a href="../index.html">
+                    <i class='bx bx-log-out' id="log_out" ></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section"> 
+        <div id="aa">
+            <div class="video">영상자리</div>
+            <div class="item">
+                <button class="button a" onclik="">
+                    <i class='bx bxs-phone'></i>
+                </button>
+            </div>
+            <div class="item">
+                <button class="button b" onclik="">
+                    <i class='bx bxs-phone'></i>
+                </button>
+            </div>
+        </div>
+        <div id="bb">
+            <div class="container">
+                <h1 style="font-size:40px; padding-top: 10px; height: 70px;">방문자 음성메시지</h1>
+                <div class="list_box">
+                    <div class="list1">
+                        <div id="message0" onclick="select(0);">
+                            음성메시지 보낸 사람 : 
+                            <span id="name0">1</span>
+                            <img class="trash" 
+                            src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png" 
+                            onclick="if(confirm('목록에서 삭제하시겠습니까?')){document.getElementById('message0').style.visibility = 'hidden'}"/>
+                        </div>
+                        <div id="message1" onclick="select(1);">
+                            음성메시지 보낸 사람 : 
+                            <span id="name1">1</span>
+                            <img class="trash" 
+                            src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png" 
+                            onclick="if(confirm('목록에서 삭제하시겠습니까?')){document.getElementById('message1').style.visibility = 'hidden'}"/>
+                        </div>
+                        <div id="message2" onclick="select(2);">
+                            음성메시지 보낸 사람 : 
+                            <span id="name2">1</span>
+                            <img class="trash" 
+                            src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png" 
+                            onclick="if(confirm('목록에서 삭제하시겠습니까?')){document.getElementById('message2').style.visibility = 'hidden'}"/>
+                        </div>
+                        <div id="message3" onclick="select(3);">
+                            음성메시지 보낸 사람 : 
+                            <span id="name3">1</span>
+                            <img class="trash" 
+                            src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png" 
+                            onclick="if(confirm('목록에서 삭제하시겠습니까?')){document.getElementById('message3').style.visibility = 'hidden'}"/>
+                        </div>
+                        <div id="message4" onclick="select(4);">
+                            음성메시지 보낸 사람 : 
+                            <span id="name4">1</span>
+                            <img class="trash" 
+                            src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png" 
+                            onclick="if(confirm('목록에서 삭제하시겠습니까?')){document.getElementById('message4').style.visibility = 'hidden'}"/>
+                        </div>
+                        <div id="message5" onclick="select(5);">
+                            음성메시지 보낸 사람 : 
+                            <span id="name5">1</span>
+                            <img class="trash" 
+                            src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png" 
+                            onclick="if(confirm('목록에서 삭제하시겠습니까?')){document.getElementById('message5').style.visibility = 'hidden'}"/>
+                        </div>
+                        <div id="message6" onclick="select(6);">
+                            음성메시지 보낸 사람 : 
+                            <span id="name6">1</span>
+                            <img class="trash" 
+                            src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png" 
+                            onclick="if(confirm('목록에서 삭제하시겠습니까?')){document.getElementById('message6').style.visibility = 'hidden'}"/>
+                        </div>
+                        <div id="message7" onclick="select(7);">
+                            음성메시지 보낸 사람 : 
+                            <span id="name7">1</span>
+                            <img class="trash" 
+                            src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png" 
+                            onclick="if(confirm('목록에서 삭제하시겠습니까?')){document.getElementById('message7').style.visibility = 'hidden'}"/>
+                        </div>
+                        <div id="message8" onclick="select(8);">
+                            음성메시지 보낸 사람 : 
+                            <span id="name8">1</span>
+                            <img class="trash" 
+                            src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png" 
+                            onclick="if(confirm('목록에서 삭제하시겠습니까?')){document.getElementById('message8').style.visibility = 'hidden'}"/>
+                        </div>
+                        <div id="message9" onclick="select(9);">
+                            음성메시지 보낸 사람 : 
+                            <span id="name9">1</span>
+                            <img class="trash" 
+                            src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png" 
+                            onclick="if(confirm('목록에서 삭제하시겠습니까?')){document.getElementById('message9').style.visibility = 'hidden'}"/>
+                        </div>
+                    </div>
+                    <audio id="audio" src="" controls></audio>
+                </div>
+            </div>
+        </div>
+        <div id="cc">
+            <div class="section">
+                <input type="radio" name="slide" id="slide01" checked>
+                <input type="radio" name="slide" id="slide02">
+                <input type="radio" name="slide" id="slide03">
+                <div class="slide-wrap">
+                    <ul class="slidelist">
+                        <li>
+                            <a>
+                                <label for="slide03" class="left"></label>
+                                <div class="textbox">
+                                    <p>YY/MM/DD hh:mm:ss</p>
+                                </div>
+                                <img src="http://192.168.0.21:8888/picture/next" class="img">
+                                <label for="slide02" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide01" class="left"></label>
+                                <div class="textbox">
+                                    <p>YY/MM/DD hh:mm:ss</p>
+                                </div>
+                                <img src="2.jpg" class="img">
+                                <label for="slide03" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide02" class="left"></label>
+                                <div class="textbox">
+                                    <p>YY/MM/DD hh:mm:ss</p>
+                                </div>
+                                <img src="3.jpg" class="img">
+                                <label for="slide01" class="right"></label>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
