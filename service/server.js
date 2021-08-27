@@ -2,6 +2,7 @@ var http = require('http')
 var path = require('path')
 var express = require('express')
 var luna = require('./luna');
+var app_path = '/media/developer/apps/usr/palm/applications/com.domain.tutorial/door1/'
 
 function init(service){
     var app = express();
@@ -26,6 +27,11 @@ function init(service){
         luna.tts("text to speack test.");
         console.log("[Request] URI: '/speak'")
     })
+    app.get('/upload',function(req,res){
+        res.sendFile(app_path+'upload.php');
+        console.log("[Requent] URI: 'upload'")
+    })
+
 
     const server = http.createServer(app);
     server.listen(port,() => {
