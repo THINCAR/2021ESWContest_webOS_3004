@@ -323,6 +323,10 @@
   color:#fff;
   background-color: #9e9e9e;
 }
+.b li.active2 button{
+  color:#fff;
+  background-color: #9e9e9e;
+}
 .i_icon{
   position: fixed;
   top:10px;
