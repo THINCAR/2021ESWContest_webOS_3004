@@ -6,6 +6,7 @@ let sidebar = document.querySelector(".sidebar");
 let closeBtn = document.querySelector("#btn");
 let bathSwitch = document.querySelector("#bath_onoff")
 let heatSwitch = document.querySelector("#heat_onoff")
+let heatLevel = document.querySelector("#heat_level")
 
 function doShow1() { 
     if ($('#aa').is(":visible")) {  
@@ -34,6 +35,7 @@ closeBtn.addEventListener("click", ()=>{
 
 bathSwitch.addEventListener("click", (e)=>{
     let target = e.target;
+    target.classList.toggle('active');
     if(target.classList.contains("active")){
         fetch(bath_link,"waterlow");
     }
@@ -45,14 +47,47 @@ bathSwitch.addEventListener("click", (e)=>{
 
 heatSwitch.addEventListener("click", (e)=>{
     let target = e.target;
+    target.classList.toggle('active');
     if(target.classList.contains("active")){
-        fetch(heat_link,"waterlow");
+        heat1 = document.querySelector(".heat1");
+        $('.heat1').siblings().removeClass('active1');
+        heat1.classList.add('active1');
+        heatLevel.addEventListener("click",heatLevelEvent)
+        fetch(heat_link,"one");
     }
     else{
-        fetch(heat_link,"watermid");
+        $('li').siblings().removeClass('active1')
+        heatLevel.removeEventListener("click",heatLevelEvent)
+        fetch(heat_link,"turnoff");
     }
     console.log(target)
 })
+
+function heatLevelEvent(e){
+    let target = e.target;
+    if ($(e.target).is('button')){
+        target = target.parentElement;
+    }
+    $('li').siblings().removeClass('active1');
+    target.classList.add('active1');
+    console.log(target)
+    if(target.classList.contains("heat1")){
+        fetch(heat_link,"one");
+    };
+    if(target.classList.contains("heat2")){
+        fetch(heat_link,"two");
+    };
+    if(target.classList.contains("heat3")){
+        fetch(heat_link,"three");
+    };
+    if(target.classList.contains("heat4")){
+        fetch(heat_link,"four");
+    };
+    if(target.classList.contains("heat5")){
+        fetch(heat_link,"five");
+    };
+}
+
 
 
 function menuBtnChange() {
@@ -68,21 +103,7 @@ $('#bb').hide();
 
 $(document).ready(function(){
     $('li').on('click',function(){
-        $(this).siblings().removeClass('active1');
-        $(this).addClass('active1');
-    })
-})
-
-$(document).ready(function(){
-    $('li').on('click',function(){
         $(this).siblings().removeClass('active2');
         $(this).addClass('active2');
     })
-})
-
-//	$(document).ready(function(){
-//	$('li').on('click',function(){
-//		$(this).siblings().removeClass('act');
-//		$(this).addClass('act');
-//	})
-//	})
+});
