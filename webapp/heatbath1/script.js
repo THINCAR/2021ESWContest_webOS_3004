@@ -1,9 +1,11 @@
 
-module_link = "http://192.168.0.35/"
+bath_link = "http://192.168.0.35/"
+heat_link = "http://192.168.0.35/"
 
 let sidebar = document.querySelector(".sidebar");
 let closeBtn = document.querySelector("#btn");
-let toggleSwitch = document.querySelector("#toggle_switch")
+let bathSwitch = document.querySelector("#bath_onoff")
+let heatSwitch = document.querySelector("#heat_onoff")
 
 function doShow1() { 
     if ($('#aa').is(":visible")) {  
@@ -30,13 +32,24 @@ closeBtn.addEventListener("click", ()=>{
     menuBtnChange();
 });
 
-toggleSwitch.addEventListener("click", (e)=>{
+bathSwitch.addEventListener("click", (e)=>{
     let target = e.target;
     if(target.classList.contains("active")){
-        fetch(module_link,"waterlow");
+        fetch(bath_link,"waterlow");
     }
     else{
-        fetch(module_link,"watermid");
+        fetch(bath_link,"watermid");
+    }
+    console.log(target)
+})
+
+heatSwitch.addEventListener("click", (e)=>{
+    let target = e.target;
+    if(target.classList.contains("active")){
+        fetch(heat_link,"waterlow");
+    }
+    else{
+        fetch(heat_link,"watermid");
     }
     console.log(target)
 })
