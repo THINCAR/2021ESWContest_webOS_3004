@@ -26,7 +26,7 @@ function doShow2() {
         $('#aa').hide(); 
         $('#bb').show(); 
     } 
-} 
+}
 
 closeBtn.addEventListener("click", ()=>{
     sidebar.classList.toggle("open");
@@ -34,9 +34,8 @@ closeBtn.addEventListener("click", ()=>{
 });
 
 bathSwitch.addEventListener("click", (e)=>{
-    let target = e.target;
-    target.classList.toggle('active');
-    if(target.classList.contains("active")){
+    bathSwitch.classList.toggle('active');
+    if(bathSwitch.classList.contains("active")){
         fetch(bath_link,"waterlow");
     }
     else{
@@ -46,9 +45,8 @@ bathSwitch.addEventListener("click", (e)=>{
 })
 
 heatSwitch.addEventListener("click", (e)=>{
-    let target = e.target;
-    target.classList.toggle('active');
-    if(target.classList.contains("active")){
+    heatSwitch.classList.toggle('active');
+    if(heatSwitch.classList.contains("active")){
         heat1 = document.querySelector(".heat1");
         $('.heat1').siblings().removeClass('active1');
         heat1.classList.add('active1');
