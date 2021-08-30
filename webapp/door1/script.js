@@ -11,6 +11,9 @@ window.onload = function() {
     let menu2 = document.querySelector("#menu_2");
     let menu3 = document.querySelector("#menu_3");
 
+    let btn_a = document.querySelector("#button_a")
+    let btn_b = document.querySelector("#button_b")
+
     let page1 = document.querySelector("#aa");
     let page2 = document.querySelector("#bb");
     let page3 = document.querySelector("#cc");

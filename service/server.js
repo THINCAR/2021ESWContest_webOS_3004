@@ -2,7 +2,29 @@ var http = require('http')
 var path = require('path')
 var express = require('express')
 var luna = require('./luna');
-var app_path = '/media/developer/apps/usr/palm/applications/com.domain.tutorial/door1/'
+var multer = require('multer')
+var door_path = '/media/developer/apps/usr/palm/applications/com.domain.tutorial/door1/uploads'
+var refrigerator_path = '/media/developer/apps/usr/palm/applications/com.domain.tutorial/refrigerator1/uploads'
+var upload_door = multer({
+    storage: multer.diskStorage({
+        destination: (req, file, cb) => {
+            cb(null, door_path);
+        },
+        filename: (req, file, cb) => {
+            cb(null, file.originalname);
+        },
+    }),
+})
+var upload_refrigerator = multer({
+    storage: multer.diskStorage({
+        destination: (req, file, cb) => {
+            cb(null, refrigerator_path);
+        },
+        filename: (req, file, cb) => {
+            cb(null, file.originalname);
+        },
+    }),
+})
 
 function init(service){
     var app = express();
@@ -11,6 +33,16 @@ function init(service){
     app.use(express.json());
     luna.init(service)
 
+    app.post('/upload_door',upload_door.single('file'), (req,res)=>{
+        console.log(req)
+        console.log("[Request] URI: '/upload_door'")
+        res.sendStatus(200)
+    });
+    app.post('/upload_ref',upload_refrigerator.single('file'),(req,res)=>{
+        console.log(req)
+        console.log("[Request] URI: '/upload_ref'")
+        res.sendStatus(200)
+    })
     app.get('/',function (req, res){
         res.sendFile('sample.html', { root: '.' });
         luna.toast("'/' is requested from client");
@@ -26,10 +58,6 @@ function init(service){
         res.send('<p> speaking~ </p>');
         luna.tts("text to speack test.");
         console.log("[Request] URI: '/speak'")
-    })
-    app.get('/upload',function(req,res){
-        res.sendFile(app_path+'upload.php');
-        console.log("[Requent] URI: 'upload'")
     })
 
 
