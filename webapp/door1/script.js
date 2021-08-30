@@ -27,7 +27,7 @@ window.onload = function() {
             closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
         }
     }
-  
+
     for (i=0; i<10; i++) {
         file = "./uploads/name" + i + ".txt";
         var rawFile = new XMLHttpRequest();
@@ -39,22 +39,48 @@ window.onload = function() {
                 if(rawFile.status === 200 || rawFile.status == 0)
                 {
                     var allText = rawFile.responseText;
-                    document.getElementById("name" + i).innerHTML = allText;
-                    document.getElementById("message" + i).style.visibility = "visible";
-                }
-                else{
-                    document.getElementById("name" + i).innerHTML = "";
-                    document.getElementById("message" + i).style.visibility = "hidden";
+                    if (allText.length > 0){
+                        document.getElementById("name" + i).innerHTML = allText;
+                        document.getElementById("message" + i).style.visibility = "visible";
+                    }
+                    else {
+                        document.getElementById("name" + i).innerHTML = "";
+                        document.getElementById("message" + i).style.visibility = "hidden";
+                    }  
                 }
             }
         }
         rawFile.send(null);
     }
-    
+
+    for (i=0; i<10; i++) {
+        file = "./uploads/" + i + ".txt";
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", file, false);
+        rawFile.onreadystatechange = function ()
+        {
+            if(rawFile.readyState === 4)
+            {
+                if(rawFile.status === 200 || rawFile.status == 0)
+                {
+                    var allText = rawFile.responseText;
+                    if (allText.length > 0){
+                        document.getElementById("dateTime" + i).innerHTML = allText;
+                    }
+                    else {
+                        document.getElementById("dateTime" + i).innerHTML = "";
+                    }  
+                }
+            }
+        }
+        rawFile.send(null);
+    }
+  
     closeBtn.addEventListener("click", ()=>{
         sidebar.classList.toggle("open");
         menuBtnChange();
     });
+
 
     $('#aa').show();
     $('#bb').hide();
