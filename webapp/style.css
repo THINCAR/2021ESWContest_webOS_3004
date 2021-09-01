@@ -1,3 +1,4 @@
+/*  여기 아래부터는 main.html */
 a{
     display: block;
     color: #525252;
@@ -53,4 +54,28 @@ a{
     position: fixed;
     top:320px;
     left:30px;
+}
+
+/*  여기 아래부터는 index.html */
+.container{
+    position: relative;
+    text-align: center;
+}
+
+.login_title{
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+}
+
+.face_image{
+    height: 300px;
+    width: 600px;
+    background-color: #525252;
+    margin-left: auto;
+    margin-right: auto;
+    color: wheat;
+    margin-top: 30px;
 }
