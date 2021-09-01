@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* 여기 아래는 index.html */
+.container{
+    position: relative;
+    text-align: center;
+    width: 800px;
+    height: 480px;
+}
+
+.index_title{
+    width: 300px;
+    height: fit-content;
+    background-color: yellowgreen;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.box1{
+    width: 400px;
+    height: 390px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bell{
+    width: 330px;
+    height: 300px;
+    background-color: rgba(4, 4, 102, 0.6);
+}
+
+.bell > h3{
+    color: wheat;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.bell_button{
+    background-color: rgb(172, 172, 8);
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100px;
+    margin-top: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.bell_button:hover{
+    background-color: rgb(88, 88, 5);
+}
+
+.bell_button > img{
+    margin-top: 40px;
+}
+
+.box2{
+    width: 400px;
+    height: 390px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message{
+    width: 330px;
+    height: 300px;
+    background-color: rgba(4, 4, 102, 0.6);
+}
+
+.message > h3{
+    color: wheat;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.message_button{
+    background-color: rgb(172, 172, 8);
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100px;
+    margin-top: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.message_button:hover{
+    background-color: rgb(88, 88, 5);
+}
+
+.message_button > img{
+    margin-top: 40px;
+}
+
+/* 여기 아래는 voice_message.html */
+.title{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+    margin-top: 30px;
+}
+
+.box_main{
+    height: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_object{
+    background-color: burlywood;
+    height: 200px;
+    width: 160px;
+    margin-right: 14px;
+    margin-left: 14px;
+    transition: 0.2s;
+}
+
+.box_object:hover{
+    background-color: gray;
+}
+
+.box_object > p{
+    line-height: 40px;
+    color: black;
+}
+
+.parcel{
+    background-color: whitesmoke;
+    height: 160px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.meter_reading{
+    background-color: whitesmoke;
+    height: 160px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.neighbor{
+    background-color: whitesmoke;
+    height: 160px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.public{
+    background-color: whitesmoke;
+    height: 160px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

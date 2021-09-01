@@ -60,6 +60,8 @@ a{
 .container{
     position: relative;
     text-align: center;
+    width: 800px;
+    height: 480px;
 }
 
 .login_title{
