@@ -9,7 +9,65 @@
 </head>
 <body>
     <div class="container">
+        <h1>음성메시지</h1>
+        <div class="input">
+            <label>메시지 남기는 사람 : </label>
+            <input type="text" value="택배원" readonly>
+        </div>
+        <div>
+            <div class="box1">
+                <div>
+                    <div id="record">
+                        <img src="https://img.icons8.com/ios-filled/150/000000/voice-recorder.png"/>
+                    </div>
+                    <h3 id="record_sub">녹음 준비상태</h3>
+                </div>
+                
+            </div>
+            <div class="box2">
+                <div>
+                    <div id="save">
+                        <img src="https://img.icons8.com/ios-filled/150/000000/save--v2.png"/>
+                    </div>
+                    <h3 id="save_sub">저장하기</h3>
+                </div>
+            </div>
+            <div class="box3">
+                <div>
+                    <div id="cancel">
+                        <img src="https://img.icons8.com/ios/150/000000/delete-sign--v1.png"/>
+                    </div>
+                    <h3 id="cancel_sub">취소하기</h3>
+                </div>
+                
+            </div>
+        </div>
         
+
     </div>
+    <script>
+        document.getElementById("record").addEventListener("click", () => {
+            if (document.getElementById("record").style.backgroundColor == "red"){
+                document.getElementById("record").style.backgroundColor = "grey";
+                document.getElementById("record_sub").innerText = "녹음 준비상태";
+                alert("녹음이 종료되었습니다.")
+            }
+            else{
+                document.getElementById("record").style.backgroundColor = "red";
+                document.getElementById("record_sub").innerText = "녹음 중";
+                alert("녹음이 시작되었습니다.")
+            }
+        })
+
+        document.getElementById("save").addEventListener("click", () => {
+            alert("녹음이 정상적으로 저장되었습니다.")
+            // location.href = "../index.html";
+        })
+
+        document.getElementById("cancel").addEventListener("click", () => {
+            alert("녹음이 취소되었습니다.")
+            // location.href = "../index.html";
+        })
+    </script>
 </body>
 </html>
