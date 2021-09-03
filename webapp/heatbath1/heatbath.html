@@ -8,121 +8,85 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<div class="sidebar">
-		<div class="logo-details">
-			<i class='bx bx-user icon'></i>
-			<div class="logo_name">XXX님</div>
-			<i class='bx bx-menu' id="btn" ></i>
+	<div class="menu-bar">
+        <div class="index">
+            <a href="../main.html">
+                <i class='bx bxs-home'></i>
+            </a>
+        </div>
+        <button class="button az" onclick="javascript:doShow1()">전기장판 욕조</button>
+    </div>
+    <section class="home-section">
+		<div class="cona"></div>
+		<div class="heat">
+			<i class='bx bxs-bed'></i>
+			<div class="name1">전기장판</div>
+			<div class="on1">on/off</div>
+			<div class="de1">온도</div>
+			<div class="toggle-btn" id="heat_onoff">
+				<div class="inner-circle"></div>
+			</div>
+			<ul class="a" id="heat_level">
+				<li class="heat1 active1">
+					<button onclik="">1</button>
+				</li>
+				<li class="heat2">
+					<button onclik="">2</button>
+				</li>
+				<li class="heat3">
+					<button onclik="">3</button>
+				</li>
+				<li class="heat4">
+					<button onclik="">4</button>
+				</li>
+				<li class="heat5">
+					<button onclik="">5</button>
+				</li>
+			</ul>  
 		</div>
-		<ul class="nav-list">
-			<li>
-				<button onclick="javascript:doShow1()">
-					<i class='bx bx-bed'></i>
-					<span class="links_name">전기장판</span>
-				</button>
-				<span class="tooltip">전기장판</span>
-			</li>
-			<li>
-				<button onclick="javascript:doShow2()">
-					<i class='bx bx-bath' ></i>
-					<span class="links_name">욕조</span>
-				</button>
-				<span class="tooltip">욕조</span>
-			</li>
-			<li class="out">
-				<div class="out-details">
-					<div class="name_out">
-						<div class="name">메인으로 돌아가기</div>
-					</div>
-				</div>
-				<a href="../main.html">
-					<i class='bx bx-log-out' id="log_out" ></i>
-				</a>
-			</li>
-		</ul>
-	</div>
-	<section class="home-section"> 
-		<div id="aa">
-			<div class="i_icon">
-				<i class='bx bx-bed'></i>
-				<div class="icon_name">전기장판</div>
-			</div> 
-			<div class="con1">
-				<div class="name">OFF/ON</div>
-				<div class="name">온도</div>  
-			</div>
-			<div class="con2">
-				<div class="toggle-btn" id="heat_onoff">
-					<div class="inner-circle"></div>
-				</div>
-				<ul class="a" id="heat_level">
-					<li class="heat1 active1">
-						<button onclik="">1단계</button>
-					</li>
-					<li class="heat2">
-						<button onclik="">2단계</button>
-					</li>
-					<li class="heat3">
-						<button onclik="">3단계</button>
-					</li>
-					<li class="heat4">
-						<button onclik="">4단계</button>
-					</li>
-					<li class="heat5">
-						<button onclik="">5단계</button>
-					</li>
-				</ul>  
-			</div>
-		</div>
-		<div id="bb">
-			<div class="i_icon">
-				<i class='bx bx-bath'></i>
-				<div class="icon_name">욕조</div>
-			</div> 
-			<div class="con1">
-				<div class="name">OFF/ON</div>
-				<div class="name">온도</div>
-				<div class="name">수위</div>
-			</div>
-			<div class="con2">
-				<div class="toggle-btn" id="bath_onoff">
-					<div class="inner-circle"></div>
-				</div> 
-				<ul class="a">
-					<li class="active1">
-						<button onclik="">1단계</button>
-					</li>
-					<li>
-						<button onclik="">2단계</button>
-					</li>
-					<li>
-						<button onclik="">3단계</button>
-					</li>
-					<li>
-						<button onclik="">4단계</button>
-					</li>
-					<li>
-						<button onclik="">5단계</button>
-					</li>
-				</ul> 
-				<ul class="b">
-					<li class="active2">
-						<button onclik="">1단계</button>
-					</li>
-					<li>
-						<button onclik="">2단계</button>
-					</li>
-					<li>
-						<button onclik="">3단계</button>
-					</li>
-					<li>
-						<button onclik="">4단계</button>
-					</li>
-					<li>
-						<button onclik="">5단계</button>
-					</li>
-				</ul> 
-			</div>
+		<div class="bath">
+			<i class='bx bxs-bath' ></i>
+			<div class="name2">욕조</div>
+			<div class="on2">on/off</div>
+			<div class="de2">온도</div>
+			<div class="hei">수위</div>
+			<div class="toggle-btn" id="bath_onoff">
+				<div class="inner-circle"></div>
+			</div>  
+			<ul class="b">
+				<li class="active2">
+					<button onclik="">1</button>
+				</li>
+				<li>
+					<button onclik="">2</button>
+				</li>
+				<li>
+					<button onclik="">3</button>
+				</li>
+				<li>
+					<button onclik="">4</button>
+				</li>
+				<li>
+					<button onclik="">5</button>
+				</li>
+			</ul> 
+			<ul class="c">
+				<li class="active3">
+					<button onclik="">1</button>
+				</li>
+				<li>
+					<button onclik="">2</button>
+				</li>
+				<li>
+					<button onclik="">3</button>
+				</li>
+				<li>
+					<button onclik="">4</button>
+				</li>
+				<li>
+					<button onclik="">5</button>
+				</li>
+			</ul>
 		</div>
     </section>
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>

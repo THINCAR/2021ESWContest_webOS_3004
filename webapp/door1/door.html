@@ -5,53 +5,22 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <script src="http://code.jquery.com/jquery-latest.js"></script> 
-    <script type="text/javascript" src="luna.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="sidebar">
-        <div class="logo-details">
-            <i class='bx bx-user icon'></i>
-            <div class="logo_name">XXX님</div>
-            <i class='bx bx-menu' id="btn" ></i>
+    <div class="menu-bar">
+        <div class="index">
+            <a href="../main.html">
+                <i class='bx bxs-home'></i>
+            </a>
         </div>
-        <ul class="nav-list">
-            <li>
-                <button id="menu_1">
-                    <i class='bx bx-bell'></i>
-                    <span class="links_name">현관</span>
-                </button>
-                <span class="tooltip">현관</span>
-            </li>
-            <li>
-                <button id="menu_2">
-                    <i class='bx bx-voicemail'></i>
-                    <span class="links_name">음성메세지</span>
-                </button>
-                <span class="tooltip">음성메세지</span>
-            </li>
-            <li>
-                <button id="menu_3">
-                    <i class='bx bx-image-alt' ></i>
-                    <span class="links_name">방문자</span>
-                </button>
-                <span class="tooltip">방문자</span>
-            </li>
-            <li class="out">
-                <div class="out-details">
-                    <div class="name_out">
-                        <div class="name">메인으로 돌아가기</div>
-                    </div>
-                </div>
-                <a href="../main.html">
-                    <i class='bx bx-log-out' id="log_out" ></i>
-                </a>
-            </li>
-        </ul>
+        <button class="button a" onclick="javascript:doShow1()">현관</button>
+        <button class="button b"onclick="javascript:doShow2()">음성메세지</button>
+        <button class="button c"onclick="javascript:doShow2()">방문객</button>
     </div>
-    <section class="home-section"> 
+    <section class="home-section">
         <div id="aa">
-            <div class="video">영상자리</div>
+			<div class="conc"></div>
         </div>
         <div id="bb">
             <div class="container">
@@ -132,6 +101,7 @@
                     <audio id="audio" src="" controls></audio>
                 </div>
             </div>
+        </div>
         </div>
         <div id="cc">
             <div class="section">

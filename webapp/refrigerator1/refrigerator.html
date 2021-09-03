@@ -8,64 +8,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<div class="sidebar">
-		<div class="logo-details">
-			<i class='bx bx-user icon'></i>
-				<div class="logo_name">XXX님</div>
-				<i class='bx bx-menu' id="btn" ></i>
-		</div>
-		<ul class="nav-list">
-			<li>
-				<button onclick="javascript:doShow1()">
-					<i class='bx bx-door-open'></i>
-					<span class="links_name">냉장고 내부</span>
-				</button>
-				<span class="tooltip">냉장고 내부</span>
-			</li>
-			<li>
-				<button onclick="javascript:doShow2()">
-					<i class='bx bx-grid-alt'></i>
-					<span class="links_name">메뉴 추천</span>
-				</button>
-				<span class="tooltip">메뉴추천</span>
-			</li>
-			<li class="out">
-                <div class="out-details">
-					<div class="name_out">
-						<div class="name">메인으로 돌아가기</div>
-					</div>
-				</div>
-				<a href="../main.html"><i class='bx bx-log-out' id="log_out" ></i></a>
-			</li>
-		</ul>
-	</div>
-	<section class="home-section"> 
-		<div id="aa">
+    <div class="menu-bar">
+        <div class="index">
+            <a href="../main.html">
+                <i class='bx bxs-home'></i>
+            </a>
+        </div>
+        <button class="button a" onclick="javascript:doShow1()">냉장고 내부</button>
+        <button class="button b"onclick="javascript:doShow2()">메뉴 추천</button>
+    </div>
+    <section class="home-section">
+        <div id="aa">
 			<div class="video">
-				<div class="video_title">실시간 냉장고 내부 모습</div>
 				<img src="./uploads/food.jpg" height="400px" width="335px">
 			</div>
 			<div class="refri-object">
-				<div class= "refri-name">냉장고 내부 식재료</div>
-				<img src="memo.png" alt="" class="list-image">
 				<div class="refri-in" id="foodList"></div>
 			</div>
 			<div id="refri-object2"></div>
-		</div>
-		<div id="bb">
-			<div class="stage">
-				<div class="menu_title"><h1>냉장고 내부 식재료를 활용한 메뉴추천</h1></div>
-				<div id="menu_list"></div>
-				<br>
-			</div>
-			<div id="recipe_box">
-				<div id="recipe_inner">
-					<div id="recipe_description"></div>
-					<img src="https://img.icons8.com/ios-filled/96/000000/cancel.png" id="exit"/>
-				</div>
-			</div>
-		</div>
-	</section>
+        </div>
+        <div id="bb">
+            <div class="conc">
+                <div class="stage">
+                    <div class="menu_title"><h1>냉장고 내부 식재료를 활용한 메뉴추천</h1></div>
+                    <div id="menu_list"></div>
+                    <br>
+                </div>
+                <div id="recipe_box">
+                    <div id="recipe_inner">
+                        <div id="recipe_description"></div>
+                        <img src="https://img.icons8.com/ios-filled/96/000000/cancel.png" id="exit"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script type="text/javascript" src="./script.js"></script>
     <script>
     $('#aa').show();
