@@ -162,13 +162,15 @@
     left:0;
     display: none;
     transition: 0.3s;
+    z-index: 10;
 }
 
 #recipe_inner{
     background-color: white;
     width: 400px;
     height: 400px;
-    margin-left: 240px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 40px;
     position: relative;
     border-radius: 5px;
@@ -200,6 +202,7 @@
     left:0;
     display: none;
     transition: 0.3s;
+    z-index: 10;
 }
 
 #video_inner{
