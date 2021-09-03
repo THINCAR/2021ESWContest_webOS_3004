@@ -175,3 +175,18 @@
     align-items: center;
     justify-content: center;
 }
+
+#back{
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    background-color: burlywood;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+#back > img{
+    height: 50px;
+    width: 50px;
+}

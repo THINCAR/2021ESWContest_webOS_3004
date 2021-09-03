@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* 여기 아래는 index.html */
+.container{
+    position: relative;
+    text-align: center;
+    width: 800px;
+    height: 480px;
+}
+
+.index_title{
+    width: 300px;
+    height: fit-content;
+    background-color: bisque;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.box1{
+    width: 400px;
+    height: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.food{
+    width: 330px;
+    height: 300px;
+    background-color: rgba(4, 4, 102, 0.6);
+    border-radius: 5px;
+}
+
+.food > h3{
+    color: wheat;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.food_button{
+    background-color: rgb(172, 172, 8);
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100px;
+    margin-top: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.food_button:hover{
+    background-color: rgb(88, 88, 5);
+}
+
+.food_button > img{
+    margin-top: 65px;
+}
+
+/* 여기 아래는 main.html */
+.stage{
+    width: 800px;
+    height: 480px;
+    position: fixed;
+    top:0;
+    left:0;
+    padding-top: 20px;
+}
+
+.menu_title{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3px;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+#menu_list{
+    background-color: #9e9e9e;
+    width: 600px;
+    height: 390px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 14px;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+.menu{
+    width: 600px;
+    height: 180px;
+}
+
+.menu_image{
+    height: 150px;
+    width: 200px;
+    margin-top: 15px;
+    margin-left: 20px;
+    float: left;
+    border-radius: 10px;
+}
+
+.menu_description{
+    background-color: white;
+    text-align: left;
+    height: 110px;
+    width: 310px;
+    margin-top: 15px;
+    margin-left: 20px;
+    float: left;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.menu_button{
+    width: 310px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.recipe{
+    background-color: rgba(0, 0, 255, 0.7);
+    width: 100px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 10px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+}
+
+.to_kakao{
+    background-color: rgba(209, 66, 126, 0.9);
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+}
+
+#recipe_box{
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 800px;
+    height: 480px;
+    position: fixed;
+    top:0;
+    left:0;
+    display: none;
+    transition: 0.3s;
+}
+
+#recipe_inner{
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    margin-left: 240px;
+    margin-top: 40px;
+    position: relative;
+    border-radius: 5px;
+}
+
+#exit{
+    position: absolute;
+    bottom: 10px;
+    left: 175px;
+    height: 50px;
+}
+
+#recipe_description{
+    width: 360px;
+    height: 330px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+    font-size: 12px;
+}
+
+#video_box{
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 800px;
+    height: 480px;
+    position: fixed;
+    top:0;
+    left:0;
+    display: none;
+    transition: 0.3s;
+}
+
+#video_inner{
+    background-color: white;
+    width: 600px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    position: relative;
+    border-radius: 5px;
+}
+
+#exit2{
+    position: absolute;
+    bottom: 10px;
+    left: 275px;
+    height: 50px;
+}
+
+#video_description{
+    width: 500px;
+    height: 330px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+    font-size: 12px;
+}
+
+#back{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: burlywood;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+#back > img{
+    height: 50px;
+    width: 50px;
+}
