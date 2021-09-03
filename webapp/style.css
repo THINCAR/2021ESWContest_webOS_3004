@@ -1,3 +1,8 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 /*  여기 아래부터는 main.html */
 a{
     display: block;
@@ -68,16 +73,24 @@ a{
     width: fit-content;
     margin-right: auto;
     margin-left: auto;
-    padding-bottom: 10px;
-    border-bottom: 2px solid black;
+    padding-top: 50px;
 }
 
-.face_image{
-    height: 300px;
-    width: 600px;
-    background-color: #525252;
+.container > h3{
+    margin-top: 120px;
+    background-color: blue;
+    width: fit-content;
+    padding: 20px;
     margin-left: auto;
     margin-right: auto;
-    color: wheat;
-    margin-top: 30px;
+    border-radius: 5px;
+    color: white;
+}
+
+.container > h4{
+    margin-top: 20px;
+    border-bottom: 1px solid black;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
 }
