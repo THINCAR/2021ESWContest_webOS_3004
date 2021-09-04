@@ -81,7 +81,6 @@ window.onload = function() {
         menuBtnChange();
     });
 
-
     $('#aa').show();
     $('#bb').hide();
     $('#cc').hide(); 
