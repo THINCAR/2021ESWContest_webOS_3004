@@ -70,37 +70,48 @@ i{
 *{
 	text-decoration: none;
   }
-  
-  .container{
-	height: fit-content;
-	width: fit-content;
-	text-align: center;
-	margin-right: auto;
-	margin-left: auto;
-	padding-top: 30px;
-	position: fixed;
-	top: 0px;
-	left:150px;
-  }
-  
-  .list_box{
-	height: 350px;
+
+.conb{
+    position: absolute;
+    left:26px;
+    top:0px;
+    background-color: #414040;
+    border-radius: 5px;
+    width: 747px;
+    height: 389px;
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+h1{
+	margin-top: 5px;
+	margin-left: 10px;
+	font-size:28px;
+	height: 28px;
+	font-family: 'Nanum Gothic', sans-serif;
+	font-weight: 600;
+	color: #fff;
+}
+.list_box{
+	margin-top: 5px;
+	height: 275px;
 	width: 580px;
 	margin-right: auto;
 	margin-left: auto;
-  }
-  
-  .list1{
+}
+
+.list1{	
 	background-color: rgba(0, 0, 0, 0.7);
 	height: 275px;
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 	overflow-y: auto;
 	overflow-x: auto;
-  }
-  
-  #message0, #message1, #message2, #message3,
-  #message4, #message5, #message6, #message7,
-  #message8, #message9{
+}
+
+#message0, #message1, #message2, #message3,
+#message4, #message5, #message6, #message7,
+#message8, #message9{
 	margin-top: 20px;
 	cursor: pointer;
 	display: flex;
@@ -111,9 +122,9 @@ i{
 	padding: 10px;
 	border-radius: 10px;
 	visibility: hidden;
-  }
-  
-  .trash{
+}
+
+.trash{
 	background-color: gray;
 	cursor: pointer;
 	right: 10px;
@@ -121,61 +132,67 @@ i{
 	position: absolute;
 	border-radius: 2px;
 	z-index: 100;
-  }
-  
-  
-  .img{
-	  width: 600px; 
-	  height: 420px;
-  }
-  .section {
-	position: fixed;
-	right:20px; 
-	top:30px; 
-	left:100px; 
-	height: 350px;}
-  .section input[id*="slide"] {
+}
+
+.conb > audio{
+    width: 310px;
+	height: 45px;
+	margin-bottom: 5px;
+
+}
+.img{
+	width: 600px; 
+	height: 350px;
+}
+.section {
+	position: absolute; 
+	top:20px; 
+	left:20px;
+	width: 700px;
+	height: 350px;
+}
+.section input[id*="slide"] {
 	display:none;
-  }
-  .section .slide-wrap {
+}
+.section .slide-wrap {
 	max-width:1200px;
 	margin:0 auto;
-  }
-  .section .slidelist {
+}
+.section .slidelist {
 	white-space:nowrap;
 	font-size:0;
 	overflow:hidden;
-  }
-  .section .slidelist >li {
+}
+.section .slidelist >li {
 	display:inline-block;
 	vertical-align:middle;
 	width:100%;
 	transition:all .5s;
-  }
-  .section .slidelist > li > a {
+}
+.section .slidelist > li > a {
 	display:block;
 	position:relative;
-  }
-  .section .slidelist >li > a img {
+}
+.section .slidelist >li > a img {
 	width:100%;
-  }
-  .section .slidelist label {
+}
+.section .slidelist label {
 	position:absolute;
 	z-index:10;
 	top:50%;
 	transform:translateY(-50%);
 	padding:50px;
 	cursor:pointer;
-  }
-  .section .slidelist .left {
+}
+.section .slidelist .left {
 	left:30px;
 	background:url('./left.png') center center / 100% no-repeat;
-  }
-  .section .slidelist .right {
+}
+.section .slidelist .right {
 	right:30px;
 	background:url('./right.png') center center / 100% no-repeat;
-  }
-  .section .slidelist .textbox {
+}
+.section .slidelist .textbox {
 	position:absolute;
 	z-index:1;
 	top:92%;
@@ -184,143 +201,143 @@ i{
 	translate(-50%,-50%);
 	line-height:1.6;
 	text-align:center;
-  }
-  
-  .section .slidelist .textbox p {
+}
+
+.section .slidelist .textbox p {
 	font-size:24px;
 	color:#FF4000;
 	opacity:0; 
 	transform:translateY(30px);
 	transition:all .5s;
-  }
-  
-  .section input[id="slide01"]:checked ~ .slide-wrap .slidelist > li {
+}
+
+.section input[id="slide01"]:checked ~ .slide-wrap .slidelist > li {
 	transform:translateX(0%);
-  }
-  .section input[id="slide02"]:checked ~ .slide-wrap .slidelist > li {
+}
+.section input[id="slide02"]:checked ~ .slide-wrap .slidelist > li {
 	transform:translateX(-100%);
-  }
-  .section input[id="slide03"]:checked ~ .slide-wrap .slidelist > li {
+}
+.section input[id="slide03"]:checked ~ .slide-wrap .slidelist > li {
 	transform:translateX(-200%);
-  }
-  .section input[id="slide04"]:checked ~ .slide-wrap .slidelist > li {
+}
+.section input[id="slide04"]:checked ~ .slide-wrap .slidelist > li {
 	transform:translateX(-300%);
-  }
-  .section input[id="slide05"]:checked ~ .slide-wrap .slidelist > li {
+}
+.section input[id="slide05"]:checked ~ .slide-wrap .slidelist > li {
 	transform:translateX(-400%);
-  }
-  .section input[id="slide06"]:checked ~ .slide-wrap .slidelist > li {
+}
+.section input[id="slide06"]:checked ~ .slide-wrap .slidelist > li {
 	transform:translateX(-500%);
-  }
-  .section input[id="slide07"]:checked ~ .slide-wrap .slidelist > li {
-	transform:translateX(-600%);
-  }
-  .section input[id="slide08"]:checked ~ .slide-wrap .slidelist > li {
+}
+.section input[id="slide07"]:checked ~ .slide-wrap .slidelist > li {
+transform:translateX(-600%);
+}
+.section input[id="slide08"]:checked ~ .slide-wrap .slidelist > li {
 	transform:translateX(-700%);
-  }
-  .section input[id="slide09"]:checked ~ .slide-wrap .slidelist > li {
+}
+.section input[id="slide09"]:checked ~ .slide-wrap .slidelist > li {
 	transform:translateX(-800%);
-  }
-  .section input[id="slide10"]:checked ~ .slide-wrap .slidelist > li {
+}
+.section input[id="slide10"]:checked ~ .slide-wrap .slidelist > li {
 	transform:translateX(-900%);
-  }
-  .section input[id="slide10"]:checked ~ .slide-wrap li:nth-child(1) .textbox h3 {
+}
+.section input[id="slide10"]:checked ~ .slide-wrap li:nth-child(1) .textbox h3 {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.2s;
-  }
-  .section input[id="slide01"]:checked ~ .slide-wrap li:nth-child(1) .textbox p {
+}
+.section input[id="slide01"]:checked ~ .slide-wrap li:nth-child(1) .textbox p {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.4s;
-  }
-  .section input[id="slide02"]:checked ~ .slide-wrap li:nth-child(2) .textbox h3 {
+}
+.section input[id="slide02"]:checked ~ .slide-wrap li:nth-child(2) .textbox h3 {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.2s;
-  }
-  .section input[id="slide02"]:checked ~ .slide-wrap li:nth-child(2) .textbox p {
+}
+.section input[id="slide02"]:checked ~ .slide-wrap li:nth-child(2) .textbox p {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.4s;
-  }
-  .section input[id="slide03"]:checked ~ .slide-wrap li:nth-child(3) .textbox h3 {
+}
+.section input[id="slide03"]:checked ~ .slide-wrap li:nth-child(3) .textbox h3 {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.2s;
-  }
-  .section input[id="slide03"]:checked ~ .slide-wrap li:nth-child(3) .textbox p {
+}
+.section input[id="slide03"]:checked ~ .slide-wrap li:nth-child(3) .textbox p {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.4s;
-  }
-  .section input[id="slide04"]:checked ~ .slide-wrap li:nth-child(4) .textbox h3 {
+}
+.section input[id="slide04"]:checked ~ .slide-wrap li:nth-child(4) .textbox h3 {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.2s;
-  }
-  .section input[id="slide04"]:checked ~ .slide-wrap li:nth-child(4) .textbox p {
+}
+.section input[id="slide04"]:checked ~ .slide-wrap li:nth-child(4) .textbox p {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.4s;
-  }
-  .section input[id="slide05"]:checked ~ .slide-wrap li:nth-child(5) .textbox h3 {
+}
+.section input[id="slide05"]:checked ~ .slide-wrap li:nth-child(5) .textbox h3 {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.2s;
-  }
-  .section input[id="slide05"]:checked ~ .slide-wrap li:nth-child(5) .textbox p {
+}
+.section input[id="slide05"]:checked ~ .slide-wrap li:nth-child(5) .textbox p {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.4s;
-  }
-  .section input[id="slide06"]:checked ~ .slide-wrap li:nth-child(6) .textbox h3 {
+}
+.section input[id="slide06"]:checked ~ .slide-wrap li:nth-child(6) .textbox h3 {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.2s;
-  }
-  .section input[id="slide06"]:checked ~ .slide-wrap li:nth-child(6) .textbox p {
+}
+.section input[id="slide06"]:checked ~ .slide-wrap li:nth-child(6) .textbox p {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.4s;
-  }
-  .section input[id="slide07"]:checked ~ .slide-wrap li:nth-child(7) .textbox h3 {
+}
+.section input[id="slide07"]:checked ~ .slide-wrap li:nth-child(7) .textbox h3 {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.2s;
-  }
-  .section input[id="slide07"]:checked ~ .slide-wrap li:nth-child(7) .textbox p {
+}
+.section input[id="slide07"]:checked ~ .slide-wrap li:nth-child(7) .textbox p {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.4s;
-  }
-  .section input[id="slide08"]:checked ~ .slide-wrap li:nth-child(8) .textbox h3 {
+}
+.section input[id="slide08"]:checked ~ .slide-wrap li:nth-child(8) .textbox h3 {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.2s;
-  }
-  .section input[id="slide08"]:checked ~ .slide-wrap li:nth-child(8) .textbox p {
+}
+.section input[id="slide08"]:checked ~ .slide-wrap li:nth-child(8) .textbox p {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.4s;
-  }
-  .section input[id="slide09"]:checked ~ .slide-wrap li:nth-child(9) .textbox h3 {
+}
+.section input[id="slide09"]:checked ~ .slide-wrap li:nth-child(9) .textbox h3 {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.2s;
-  }
-  .section input[id="slide09"]:checked ~ .slide-wrap li:nth-child(9) .textbox p {
+}
+.section input[id="slide09"]:checked ~ .slide-wrap li:nth-child(9) .textbox p {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.4s;
-  }
-  .section input[id="slide10"]:checked ~ .slide-wrap li:nth-child(10) .textbox h3 {
+}
+.section input[id="slide10"]:checked ~ .slide-wrap li:nth-child(10) .textbox h3 {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.2s;
-  }
-  .section input[id="slide10"]:checked ~ .slide-wrap li:nth-child(10) .textbox p {
+}
+.section input[id="slide10"]:checked ~ .slide-wrap li:nth-child(10) .textbox p {
 	opacity:1;
 	transform:translateY(0);
 	transition-delay:.4s;
-  }
+}

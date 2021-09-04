@@ -16,15 +16,15 @@
         </div>
         <button class="button a" onclick="javascript:doShow1()">현관</button>
         <button class="button b"onclick="javascript:doShow2()">음성메세지</button>
-        <button class="button c"onclick="javascript:doShow2()">방문객</button>
+        <button class="button c"onclick="javascript:doShow3()">방문객</button>
     </div>
     <section class="home-section">
         <div id="aa">
 			<div class="conc"></div>
         </div>
         <div id="bb">
-            <div class="container">
-                <h1 style="font-size:40px; padding-top: 10px; height: 70px;">방문자 음성메시지</h1>
+            <div class="conb">
+                <h1>방문자 음성메시지</h1>
                 <div class="list_box">
                     <div class="list1">
                         <div id="message0" onclick="select(0);">
@@ -98,126 +98,128 @@
                             onclick="if(confirm('목록에서 삭제하시겠습니까?')){document.getElementById('message9').style.visibility = 'hidden'}"/>
                         </div>
                     </div>
-                    <audio id="audio" src="" controls></audio>
                 </div>
+                <audio id="audio" src="" controls></audio>
             </div>
         </div>
         </div>
         <div id="cc">
-            <div class="section">
-                <input type="radio" name="slide" id="slide01" checked>
-                <input type="radio" name="slide" id="slide02">
-                <input type="radio" name="slide" id="slide03">
-                <input type="radio" name="slide" id="slide04">
-                <input type="radio" name="slide" id="slide05">
-                <input type="radio" name="slide" id="slide06">
-                <input type="radio" name="slide" id="slide07">
-                <input type="radio" name="slide" id="slide08">
-                <input type="radio" name="slide" id="slide09">
-                <input type="radio" name="slide" id="slide10">
-                <div class="slide-wrap">
-                    <ul class="slidelist">
-                        <li>
-                            <a>
-                                <label for="slide10" class="left"></label>
-                                <div class="textbox">
-                                    <p id="dateTime9">YY/MM/DD hh:mm:ss</p>
-                                </div>
-                                <img src="./uploads/9.jpg" class="img">
-                                <label for="slide02" class="right"></label>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <label for="slide01" class="left"></label>
-                                <div class="textbox">
-                                    <p id="dateTime8">YY/MM/DD hh:mm:ss</p>
-                                </div>
-                                <img src="./uploads/8.jpg" class="img">
-                                <label for="slide03" class="right"></label>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <label for="slide02" class="left"></label>
-                                <div class="textbox">
-                                    <p id="dateTime7">YY/MM/DD hh:mm:ss</p>
-                                </div>
-                                <img src="./uploads/7.jpg" class="img">
-                                <label for="slide04" class="right"></label>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <label for="slide03" class="left"></label>
-                                <div class="textbox">
-                                    <p id="dateTime6">YY/MM/DD hh:mm:ss</p>
-                                </div>
-                                <img src="./uploads/6.jpg" class="img">
-                                <label for="slide05" class="right"></label>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <label for="slide04" class="left"></label>
-                                <div class="textbox">
-                                    <p id="dateTime5">YY/MM/DD hh:mm:ss</p>
-                                </div>
-                                <img src="./uploads/5.jpg" class="img">
-                                <label for="slide06" class="right"></label>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <label for="slide05" class="left"></label>
-                                <div class="textbox">
-                                    <p id="dateTime4">YY/MM/DD hh:mm:ss</p>
-                                </div>
-                                <img src="./uploads/4.jpg" class="img">
-                                <label for="slide07" class="right"></label>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <label for="slide06" class="left"></label>
-                                <div class="textbox">
-                                    <p id="dateTime3">YY/MM/DD hh:mm:ss</p>
-                                </div>
-                                <img src="./uploads/3.jpg" class="img">
-                                <label for="slide08" class="right"></label>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <label for="slide07" class="left"></label>
-                                <div class="textbox">
-                                    <p id="dateTime2">YY/MM/DD hh:mm:ss</p>
-                                </div>
-                                <img src="./uploads/2.jpg" class="img">
-                                <label for="slide09" class="right"></label>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <label for="slide08" class="left"></label>
-                                <div class="textbox">
-                                    <p id="dateTime1">YY/MM/DD hh:mm:ss</p>
-                                </div>
-                                <img src="./uploads/1.jpg" class="img">
-                                <label for="slide10" class="right"></label>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <label for="slide09" class="left"></label>
-                                <div class="textbox">
-                                    <p id="dateTime0">YY/MM/DD hh:mm:ss</p>
-                                </div>
-                                <img src="./uploads/0.jpg" class="img">
-                                <label for="slide01" class="right"></label>
-                            </a>
-                        </li>
-                    </ul>
+            <div class="conc">
+                <div class="section">
+                    <input type="radio" name="slide" id="slide01" checked>
+                    <input type="radio" name="slide" id="slide02">
+                    <input type="radio" name="slide" id="slide03">
+                    <input type="radio" name="slide" id="slide04">
+                    <input type="radio" name="slide" id="slide05">
+                    <input type="radio" name="slide" id="slide06">
+                    <input type="radio" name="slide" id="slide07">
+                    <input type="radio" name="slide" id="slide08">
+                    <input type="radio" name="slide" id="slide09">
+                    <input type="radio" name="slide" id="slide10">
+                    <div class="slide-wrap">
+                        <ul class="slidelist">
+                            <li>
+                                <a>
+                                    <label for="slide10" class="left"></label>
+                                    <div class="textbox">
+                                        <p id="dateTime9">YY/MM/DD hh:mm:ss</p>
+                                    </div>
+                                    <img src="./uploads/9.jpg" class="img">
+                                    <label for="slide02" class="right"></label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <label for="slide01" class="left"></label>
+                                    <div class="textbox">
+                                        <p id="dateTime8">YY/MM/DD hh:mm:ss</p>
+                                    </div>
+                                    <img src="./uploads/8.jpg" class="img">
+                                    <label for="slide03" class="right"></label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <label for="slide02" class="left"></label>
+                                    <div class="textbox">
+                                        <p id="dateTime7">YY/MM/DD hh:mm:ss</p>
+                                    </div>
+                                    <img src="./uploads/7.jpg" class="img">
+                                    <label for="slide04" class="right"></label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <label for="slide03" class="left"></label>
+                                    <div class="textbox">
+                                        <p id="dateTime6">YY/MM/DD hh:mm:ss</p>
+                                    </div>
+                                    <img src="./uploads/6.jpg" class="img">
+                                    <label for="slide05" class="right"></label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <label for="slide04" class="left"></label>
+                                    <div class="textbox">
+                                        <p id="dateTime5">YY/MM/DD hh:mm:ss</p>
+                                    </div>
+                                    <img src="./uploads/5.jpg" class="img">
+                                    <label for="slide06" class="right"></label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <label for="slide05" class="left"></label>
+                                    <div class="textbox">
+                                        <p id="dateTime4">YY/MM/DD hh:mm:ss</p>
+                                    </div>
+                                    <img src="./uploads/4.jpg" class="img">
+                                    <label for="slide07" class="right"></label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <label for="slide06" class="left"></label>
+                                    <div class="textbox">
+                                        <p id="dateTime3">YY/MM/DD hh:mm:ss</p>
+                                    </div>
+                                    <img src="./uploads/3.jpg" class="img">
+                                    <label for="slide08" class="right"></label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <label for="slide07" class="left"></label>
+                                    <div class="textbox">
+                                        <p id="dateTime2">YY/MM/DD hh:mm:ss</p>
+                                    </div>
+                                    <img src="./uploads/2.jpg" class="img">
+                                    <label for="slide09" class="right"></label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <label for="slide08" class="left"></label>
+                                    <div class="textbox">
+                                        <p id="dateTime1">YY/MM/DD hh:mm:ss</p>
+                                    </div>
+                                    <img src="./uploads/1.jpg" class="img">
+                                    <label for="slide10" class="right"></label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <label for="slide09" class="left"></label>
+                                    <div class="textbox">
+                                        <p id="dateTime0">YY/MM/DD hh:mm:ss</p>
+                                    </div>
+                                    <img src="./uploads/0.jpg" class="img">
+                                    <label for="slide01" class="right"></label>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
