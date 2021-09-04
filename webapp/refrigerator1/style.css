@@ -147,34 +147,34 @@ img{
     bottom: -5px;
     line-height: 23px;
 }
+
 .conc{
-    position: absolute;
-    left:26px;
-    top:9px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
     background-color: #414040;
     border-radius: 5px;
     width: 747px;
     height: 380px;
 }
+
 .stage{
     width: 747px;
     height: 380px;
-    position: absolute;
-    top:0px;
-    left:0px;
     padding-top: 20px;
-  }
-  
-h1{
-    font-size: 20px;
-    color: #fff;
 }
+  
 .menu_title{
     width: 400px;
     margin-left: 180px;
     padding-bottom: 3px;
     border-bottom: 2px solid #fff;
     text-align: center;
+}
+
+.menu_title > h1{
+    font-size: 20px;
+    color: #fff;
 }
   
 #menu_list{
@@ -190,24 +190,25 @@ h1{
 .menu{
     width: 570px;
     height: 180px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
   
 .menu_image{
     height: 150px;
     width: 200px;
-    margin-top: 15px;
-    margin-left: 20px;
-    float: left;
     border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
 }
   
 .menu_description{
     background-color: white;
-    height: 150px;
-    width: 310px;
-    margin-top: 15px;
-    margin-left: 20px;
-    float: left;
+    height: 130px;
+    width: 290px;
+    margin-left: 220px;
     border-radius: 10px;
     padding: 10px;
 }
@@ -215,6 +216,7 @@ h1{
 .menu_button{
     width: 290px;
     height: 60px;
+    margin-top: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -246,7 +248,6 @@ h1{
     position: fixed;
     width: 800px;
     height: 480px;
-    position: fixed;
     top:0;
     left:0;
     display: none;
@@ -255,21 +256,23 @@ h1{
   
 #recipe_inner{
     background-color: white;
-    width: 400px;
+    width: 500px;
     height: 400px;
-    margin-left: 240px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 40px;
     position: relative;
     border-radius: 5px;
 }
   
 #exit{
-    position: absolute;
-    bottom: 10px;
-    left: 175px;
+    position: relative;
+    left: 225px;
+    top: 0px;
     height: 50px;
+    width: 50px;
 }
-  
+
 #recipe_description{
     width: 360px;
     height: 330px;
