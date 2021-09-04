@@ -14,6 +14,8 @@ import torch
 import torch.backends.cudnn as cudnn
 import requests
 import json
+import camera
+import time
 
 FILE = Path(__file__).absolute()
 sys.path.append(FILE.parents[0].as_posix())  # add yolov5/ to path
@@ -278,40 +280,53 @@ def main(opt):
     run(**vars(opt))
 
 
+camera = camera.VideoCamera()
+time.sleep(0.2)
+
 while True:
-    image_path = 'data/images'
-    opt = parse_opt(image_path)
-    main(opt)
+    # if문 조건을 냉장고모듈 사이트에 접속할 때의 신호를 받을 때만 작동하게끔 수정필요
+    if True:
+        # camera.py 내용 수정필요(보드 카메라모듈에 맞게끔)
+        frame = camera.get_frame()
 
-    try:
-        url = 'http://192.168.0.69:5555/upload_ref'
+        # Resize frame of video to 1/4 size(식재료를 잘 인식못할 경우 수정해볼 필요 있을 듯)
+        # small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
 
-        with open("food_list.txt", 'w') as f:
-            for key in list(food.keys()):
-                if int(food[key]) != 0:
-                    f.write(key + " ")
-        files = {'file': open("food_list.txt", 'rb')}
-        r = requests.post(url, files=files)
+        foodImg = frame
+        cv2.imwrite('data/frame/food.jpg', foodImg)
 
-        for i in list(food.keys()):
-            with open(i + ".txt", 'w') as f:
-                f.write(str(food[i]))
-            files = {'file': open(i + ".txt", 'rb')}
+        # 기존 사진파일 경로
+        # image_path = 'data/images'
+
+        image_path = 'data/frame'
+        opt = parse_opt(image_path)
+        main(opt)
+
+        try:
+            url = 'http://192.168.0.69:5555/upload_ref'
+
+            with open("food_list.txt", 'w') as f:
+                for key in list(food.keys()):
+                    if int(food[key]) != 0:
+                        f.write(key + " ")
+            files = {'file': open("food_list.txt", 'rb')}
             r = requests.post(url, files=files)
 
-        files = {'file': open(str(result_image_path["path"]) + "/food.jpg", 'rb')}
-        r = requests.post(url, files=files)
+            for i in list(food.keys()):
+                with open(i + ".txt", 'w') as f:
+                    f.write(str(food[i]))
+                files = {'file': open(i + ".txt", 'rb')}
+                r = requests.post(url, files=files)
 
-        # json 형식으로 만들어서 Post 하려고 시도했는데 끝내 성공못함.
-        # url = 'http://localhost:3000/webOS_refrigerator/result.php'
-        # headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
-        # postMessage = {"Info": {"ID": 1, "IP": "192.168.1.1"}}
-        # response = requests.post(url, json=postMessage, headers=headers)
-        if r.status_code == 200:
-            print("전송 성공")
-        else:
+            files = {'file': open(str(result_image_path["path"]) + "/food.jpg", 'rb')}
+            r = requests.post(url, files=files)
+
+            if r.status_code == 200:
+                print("전송 성공")
+            else:
+                print("전송 실패")
+        except:
             print("전송 실패")
-    except:
-        print("전송 실패")
 
+    # 삭제예정
     break
