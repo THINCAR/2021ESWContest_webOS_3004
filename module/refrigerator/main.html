@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./style.css">
     <title>냉장고 모듈</title>
 </head>
 <body>
-    <div class="container">
+    <div class="blur"></div>
+    <div class="con1">
         <div class="stage">
             <div class="menu_title"><h1>차량에서 전송한 메뉴목록</h1></div>
             <div id="menu_list"></div>
@@ -26,8 +28,31 @@
                 <img src="https://img.icons8.com/ios-filled/96/000000/cancel.png" id="exit2"/>
             </div>
         </div>
-        <div id="back">
-            <img src="https://img.icons8.com/ios/50/000000/circled-left-2.png"/>
+    </div>
+    <div class="con2">
+        <div class="nick">냉장실</div>
+        <div class="degree1">0 ºC</div>
+        <button class="up" onclick="">
+            <i class='bx bxs-up-arrow'></i>
+        </button>
+        <button class="down" onclick="">
+            <i class='bx bxs-down-arrow' ></i>
+        </button>
+    </div>
+    <div class="con3">
+        <div class="nick">냉동실</div>
+        <div class="degree1">-17 ºC</div>
+        <button class="up" onclick="">
+            <i class='bx bxs-up-arrow'></i>
+        </button>
+        <button class="down" onclick="">
+                <i class='bx bxs-down-arrow' ></i>
+        </button>
+    </div>
+    <div class="con4">
+        <div class="nick">잠금</div>
+        <div class="toggle-btn" onclick="this.classList.toggle('active')">
+            <div class="inner-circle"></div>
         </div>
     </div>
     <script>
