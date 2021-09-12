@@ -56,7 +56,7 @@ function init(service){
     })
     app.get('/speak',function (req, res){
         res.send('<p> speaking~ </p>');
-        luna.tts("text to speack test.");
+        luna.tts("안녕하세요~");
         console.log("[Request] URI: '/speak'")
     })
 
@@ -82,5 +82,6 @@ function init(service){
         });
     });
 }
+
 
 exports.init = init;

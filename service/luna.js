@@ -25,6 +25,7 @@ function tts(text){
     var callback = (m) => {
         console.log("[tts] called : " + text);
     }
+    ls2.call(url,param,callback)
 }
 exports.init = init;
 exports.toast = toast;
