@@ -13,7 +13,12 @@ function doShow1(){
     else { 
         $('#cc').hide(); 
         $('#bb').hide();
-        $('#aa').show(); 
+        $('#aa').show();
+        var client = new WebSocket('ws://192.168.0.21:9999');
+        var canvas = document.querySelector('canvas');
+        var player = new jsmpeg(client, {
+		    canvas: canvas
+	    });
     } 
 }
 function doShow2(){
