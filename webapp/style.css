@@ -16,20 +16,20 @@
 }
 
 .con{
-    width: 140px;
-    height: 480px;
+    width: 275px;
+    height: 350px;
     display:flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: absolute;
-    top:0px;
-    left:10px;
+    top:22.5px;
+    left:1px;
 
 }
 a{
-    width: 130px;
-    height: 130px;
+    width: 265px;
+    height: 112px;
     display: block;
     transition: all 0.5s ease;
     text-decoration: none;
@@ -39,28 +39,28 @@ a{
 
 }
 .refrigerator > a >  p{  
-    padding-top: 53.5px;
+    padding-top: 45px;
     color: #fff;
     text-align: center;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 600;
-    padding-bottom:53.5px;
+    padding-bottom:45px;
 }
 .heatbath > a > p{
-    padding-top: 41.5px;
+    padding-top: 45px;
     color: #fff;
     text-align: center;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 600;
-    padding-bottom:41.5px;
+    padding-bottom:45px;
 }
 .door > a > p{  
-    padding-top: 53.5px;
+    padding-top: 45px;
     color: #fff;
     text-align: center;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 600;
-    padding-bottom:53.5px;
+    padding-bottom:45px;
 }
 
 .refrigerator > a > p:hover{
@@ -82,40 +82,37 @@ a{
     background-color: #fff;
 }
 .refrigerator{  
-    border: 3px solid #fff;
-    width: 130px;
-    height: 130px;
+    width: 263px;
+    height: 112px;
+    background-color: #303030;
     text-align: center;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.65);
-    border-radius: 5px;
+    border-radius: 3px;
 }
 .heatbath{
-    border: 3px solid #fff;
-    width: 130px;
-    height: 130px;
+    background-color: #303030;
+    width: 263px;
+    height: 112px;
     text-align: center;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.65);
-    border-radius: 5px;
+    border-radius: 3px;
 }
 .door{
-    border: 3px solid #fff;
-    width: 130px;
-    height: 130px;
+    background-color: #303030;
+    width: 263px;
+    height: 112px;
     text-align: center;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.65);
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 /*  여기 아래부터는 index1.html */

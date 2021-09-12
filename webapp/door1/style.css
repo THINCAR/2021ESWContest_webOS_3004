@@ -27,15 +27,16 @@ i{
     outline: none;
     display: block;
     border:0;
-    background-color: #242424;
+    background-color: #414040;
     font-weight: 600;
     text-shadow: 2px 2px 1px #000;
     font-size: 25px;
     font-family: 'Nanum Gothic', sans-serif;
     color: #fff;
     transition: all 0.5s linear;
-    border-radius: 3px;
-    padding: 3px;
+    border-radius: 5px;
+    padding: 5px;
+	box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.65);
 }
 .button:hover{
     background-color: #fff;
@@ -43,13 +44,13 @@ i{
     text-shadow: 0px 0px 0px #000;
 }
 .a{
-    left:485px;
+    left:488px;
 }
 .b{
     left:555px;
 }
 .c{
-	left:690px;
+	left:692px;
 }
 .home-section{
     background-color: #242424;
@@ -66,6 +67,7 @@ i{
     border-radius: 5px;
     width: 747px;
     height: 389px;
+	box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.65);
 }
 *{
 	text-decoration: none;
