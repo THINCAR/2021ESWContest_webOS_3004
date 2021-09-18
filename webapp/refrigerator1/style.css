@@ -206,12 +206,13 @@ img{
 }
   
 .menu_description{
-    background-color: white;
+    background-color: #eeeeee79;
     height: 130px;
     width: 290px;
     margin-left: 220px;
     border-radius: 10px;
     padding: 10px;
+    color :#fff;
 }
   
 .menu_button{
@@ -224,14 +225,14 @@ img{
 }
   
 .recipe{
-    background-color: rgba(0, 0, 255, 0.6);
+    background-color: #eeeeee;
     width: 90px;
     height: 50px;
     margin-right: 10px;
     border-radius: 10px;
     line-height: 50px;
     text-align: center;
-    color: white;
+    color: #000;
 }
   
 .to_kakao{
@@ -241,7 +242,7 @@ img{
     border-radius: 10px;
     line-height: 50px;
     text-align: center;
-    color: white;
+    color: #000;
 }
   
 #recipe_box{
