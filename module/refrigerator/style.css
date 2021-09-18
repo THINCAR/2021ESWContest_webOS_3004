@@ -118,20 +118,20 @@ button:hover{
 }
 .degree1{
     position: absolute;
-    width: 160px;
+    width: 36px;
     height: 40px;
     top:58px;
-    left:150px;
-    text-align: center;
+    left:193px;
+    text-align: right;
     font-size: 20px;
 }
 .degree2{
     position: absolute;
-    width: 160px;
+    width: 30px;
     height: 40px;
     top:58px;
-    left:150px;
-    text-align: center;
+    left:235px;
+    text-align: left;
     font-size: 20px;
 }
 .up{

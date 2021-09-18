@@ -31,27 +31,29 @@
     </div>
     <div class="con2">
         <div class="nick">냉장실</div>
-        <div class="degree1">0 ºC</div>
-        <button class="up" onclick="">
+        <div class="degree1" id="d1">0</div>
+        <div class="degree2">ºC</div>
+        <button class="up" onclick="degreeUp1()">
             <i class='bx bxs-up-arrow'></i>
         </button>
-        <button class="down" onclick="">
+        <button class="down" onclick="degreeDown1()">
             <i class='bx bxs-down-arrow' ></i>
         </button>
     </div>
     <div class="con3">
         <div class="nick">냉동실</div>
-        <div class="degree1">-17 ºC</div>
-        <button class="up" onclick="">
+        <div class="degree1" id="d2">-17</div>
+        <div class="degree2">ºC</div>
+        <button class="up" onclick="degreeUp2()">
             <i class='bx bxs-up-arrow'></i>
         </button>
-        <button class="down" onclick="">
+        <button class="down" onclick="degreeDown2()">
                 <i class='bx bxs-down-arrow' ></i>
         </button>
     </div>
     <div class="con4">
         <div class="nick">잠금</div>
-        <div class="toggle-btn" onclick="this.classList.toggle('active')">
+        <div class="toggle-btn" onclick="this.classList.toggle('active');setTimeout(`location.href = './index.html'`,500)">
             <div class="inner-circle"></div>
         </div>
     </div>
@@ -118,6 +120,34 @@
         document.getElementById("back").addEventListener("click", () => {
             location.href = "./index.html";
         });
+
+        function degreeUp1() {
+            var data = document.getElementById("d1").innerText;
+            data = Number(data);
+            data = data + 1;
+            document.getElementById("d1").innerText = data;
+        }
+
+        function degreeDown1() {
+            var data = document.getElementById("d1").innerText;
+            data = Number(data);
+            data = data - 1;
+            document.getElementById("d1").innerText = data;
+        }
+
+        function degreeUp2() {
+            var data = document.getElementById("d2").innerText;
+            data = Number(data);
+            data = data + 1;
+            document.getElementById("d2").innerText = data;
+        }
+
+        function degreeDown2() {
+            var data = document.getElementById("d2").innerText;
+            data = Number(data);
+            data = data - 1;
+            document.getElementById("d2").innerText = data;
+        }
     </script>
 </body>
 </html>
