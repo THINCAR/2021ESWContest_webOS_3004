@@ -62,16 +62,52 @@ function food_list_load(files) {
 function showLightbox() {
     var menu = this.getAttribute("data-menu");
     if (menu == "수제레몬청"){
-        document.getElementById("recipe_description").innerHTML = "<h1>메뉴이름 : 수제레몬청</h><p>수제레몬청은 추운 겨울철에 몸을 녹일 수 있는 최고의 음식입니다.</p><p>조리법 : -</p>";
+        document.getElementById("recipe_description").innerHTML = "<img src='./recipe_img/003.jpg' class='recipe_img'/>";
     }
     else if (menu == "당근전"){
-        document.getElementById("recipe_description").innerHTML = "<h1>메뉴이름 : 당근전</h><p>당근전은 당근을 활용한 건강식품으로서 남녀노소가 즐길 수 있습니다.</p><p>조리법 : -</p>";
+        document.getElementById("recipe_description").innerHTML = "<img src='./recipe_img/005.jpg' class='recipe_img'/>";
     }
     else if (menu == "당면계란전"){
-        document.getElementById("recipe_description").innerHTML = "<h1>메뉴이름 : 당면계란전</h><p>당면계란전은 당면과 계란을 활용한 이색음식입니다.</p><p>조리법 : -</p>";
+        document.getElementById("recipe_description").innerHTML = "<img src='./recipe_img/006.jpg' class='recipe_img'/>";
     }
     else if (menu == "사과팬케이크"){
-        document.getElementById("recipe_description").innerHTML = "<h1>메뉴이름 : 사과팬케이크</h><p>사과팬케이크는 특히 어린이들에게 인기가 좋은 음식입니다.</p><p>조리법 : -</p>";
+        document.getElementById("recipe_description").innerHTML = "<img src='./recipe_img/007.jpg' class='recipe_img'/>";
+    }
+    else if (menu == "파인애플볶음밥"){
+        document.getElementById("recipe_description").innerHTML = "<img src='./recipe_img/001.jpg' class='recipe_img'/>";
+    }
+    else if (menu == "포도푸딩"){
+        document.getElementById("recipe_description").innerHTML = "<img src='./recipe_img/002.jpg' class='recipe_img'/>";
+    }
+    else if (menu == "브로콜리새우볶음"){
+        document.getElementById("recipe_description").innerHTML = "<img src='./recipe_img/004.jpg' class='recipe_img'/>";
+    }
+    else if (menu == "호박베이컨볶음"){
+        document.getElementById("recipe_description").innerHTML = "<img src='./recipe_img/008.jpg' class='recipe_img'/>";
+    }
+    else if (menu == "토마토샤브샐러드"){
+        document.getElementById("recipe_description").innerHTML = "<img src='./recipe_img/009.jpg' class='recipe_img'/>";
+    }
+    else if (menu == "오이초밥"){
+        document.getElementById("recipe_description").innerHTML = "<img src='./recipe_img/010.jpg' class='recipe_img'/>";
+    }
+    else if (menu == "복숭아우유"){
+        document.getElementById("recipe_description").innerHTML = "<img src='./recipe_img/011.jpg' class='recipe_img'/>";
+    }
+    else if (menu == "새송이버섯간장버터구이"){
+        document.getElementById("recipe_description").innerHTML = "<img src='./recipe_img/012.jpg' class='recipe_img'/>";
+    }
+    else if (menu == "두부망고샐러드"){
+        document.getElementById("recipe_description").innerHTML = "<img src='./recipe_img/013.jpg' class='recipe_img'/>";
+    }
+    else if (menu == "바나나팬케이크"){
+        document.getElementById("recipe_description").innerHTML = "<img src='./recipe_img/014.jpg' class='recipe_img'/>";
+    }
+    else if (menu == "떠먹는치즈감자"){
+        document.getElementById("recipe_description").innerHTML = "<img src='./recipe_img/015.jpg' class='recipe_img'/>";
+    }
+    else if (menu == "훈제닭가슴살샐러드"){
+        document.getElementById("recipe_description").innerHTML = "<img src='./recipe_img/016.jpg' class='recipe_img'/>";
     }
     document.getElementById("recipe_box").style.display = "block";
 }
@@ -85,9 +121,45 @@ function sendKakaotalk() {
         alert("당근전에 대한 조리법을 전송 완료하였습니다.");
     }
     else if (menu == "당면계란전"){
-        alert("당면계란전에 대한 조리법을 전송 완료하였습니다.");
+        alert("당면 계란전에 대한 조리법을 전송 완료하였습니다.");
     }
     else if (menu == "사과팬케이크"){
-        alert("사과팬케이크에 대한 조리법을 전송 완료하였습니다.");
+        alert("사과 팬케이크에 대한 조리법을 전송 완료하였습니다.");
+    }
+    else if (menu == "파인애플볶음밥"){
+        alert("파인애플 볶음밥에 대한 조리법을 전송 완료하였습니다.");
+    }
+    else if (menu == "포도푸딩"){
+        alert("포도푸딩에 대한 조리법을 전송 완료하였습니다.");
+    }
+    else if (menu == "브로콜리새우볶음"){
+        alert("브로콜리 새우볶음에 대한 조리법을 전송 완료하였습니다.");
+    }
+    else if (menu == "호박베이컨볶음"){
+        alert("호박 베이컨볶음에 대한 조리법을 전송 완료하였습니다.");
+    }
+    else if (menu == "토마토샤브샐러드"){
+        alert("토마토 샤브샐러드에 대한 조리법을 전송 완료하였습니다.");
+    }
+    else if (menu == "오이초밥"){
+        alert("오이초밥에 대한 조리법을 전송 완료하였습니다.");
+    }
+    else if (menu == "복숭아우유"){
+        alert("복숭아우유에 대한 조리법을 전송 완료하였습니다.");
+    }
+    else if (menu == "새송이버섯간장버터구이"){
+        alert("새송이버섯 간장버터구이에 대한 조리법을 전송 완료하였습니다.");
+    }
+    else if (menu == "두부망고샐러드"){
+        alert("두부 망고샐러드에 대한 조리법을 전송 완료하였습니다.");
+    }
+    else if (menu == "바나나팬케이크"){
+        alert("바나나 팬케이크에 대한 조리법을 전송 완료하였습니다.");
+    }
+    else if (menu == "떠먹는치즈감자"){
+        alert("떠먹는 치즈감자에 대한 조리법을 전송 완료하였습니다.");
+    }
+    else if (menu == "훈제닭가슴살샐러드"){
+        alert("훈제닭가슴살 샐러드에 대한 조리법을 전송 완료하였습니다.");
     }
 }

@@ -97,16 +97,15 @@ img{
 }
 
 .refri-in{
-    width: 230px;
+    width: 350px;
     height: 150px;
-    font-size: 19px;
+    font-size: 22px;
     position: absolute;
-    text-align: center;
+    text-align: left;
     font-weight: 400;
-    top:45px;
+    top:20px;
     left:30px;
-    color:#585858;
-    border-radius: 30px;;
+    color:white;
 }
   
 .object-9{
@@ -225,7 +224,7 @@ img{
 }
   
 .recipe{
-    background-color: rgba(0, 0, 255, 0.7);
+    background-color: rgba(0, 0, 255, 0.6);
     width: 90px;
     height: 50px;
     margin-right: 10px;
@@ -236,7 +235,7 @@ img{
 }
   
 .to_kakao{
-    background-color: rgba(255, 188, 2, 0.9);
+    background-color: rgba(255, 188, 2, 0.8);
     width: 180px;
     height: 50px;
     border-radius: 10px;
@@ -258,7 +257,7 @@ img{
   
 #recipe_inner{
     background-color: white;
-    width: 500px;
+    width: 630px;
     height: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -269,17 +268,23 @@ img{
   
 #exit{
     position: relative;
-    left: 225px;
+    left: 290px;
     top: 0px;
     height: 50px;
     width: 50px;
 }
 
 #recipe_description{
-    width: 360px;
+    width: 620px;
     height: 330px;
     margin-right: auto;
     margin-left: auto;
     padding-top: 10px;
     font-size: 12px;
+}
+
+.recipe_img{
+    width: 600px;
+    height: 320px;
+    margin-left: 5px;
 }
