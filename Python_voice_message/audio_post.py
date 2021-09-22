@@ -26,7 +26,6 @@ while True:
     except ValueError:
         pass
     if state == 1:
-        name = input("본인의 이름을 적어주십시오 : ")
         print("녹음 시작")
         p = pyaudio.PyAudio()  # Create an interface to PortAudio
         filename = "result" + str(file_num) + ".wav"
@@ -61,6 +60,20 @@ while True:
         wf.writeframes(b''.join(frames))
         wf.close()
 
+        # 소속 불러오기 및 이름 재정의
+        f = open("yourname.txt", 'r')
+        data = f.read()
+        name = data
+        f.close()
+        if name == "parcel":
+            name = "택배원"
+        elif name == "meter_reading":
+            name = "검침원"
+        elif name == "neighbor":
+            name = "이웃집"
+        elif name == "public":
+            name = "일반인"
+
         name_file = "name" + str(name_num) + ".txt"
         with open(name_file, 'w') as f:
             f.write(name)
@@ -75,9 +88,9 @@ while True:
 
             if r.status_code == 200:
                 print("전송 성공")
+                file_num += 1
+                name_num += 1
             else:
                 print("전송 실패")
-            file_num += 1
-            name_num += 1
         except:
             print("전송 실패")

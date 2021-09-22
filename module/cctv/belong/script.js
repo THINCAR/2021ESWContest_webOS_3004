@@ -1,28 +1,31 @@
-var record = document.querySelector("#record")
-var save = document.querySelector("#save")
-var cancel = document.querySelector("#cancel")
-var back = document.querySelector("#back")
-var timeStamp = document.querySelector("#time")
+var record = document.querySelector("#record");
+var save = document.querySelector("#save");
+var cancel = document.querySelector("#cancel");
+var back = document.querySelector("#back");
+var timeStamp = document.querySelector("#time");
+var message = document.querySelector("#alert_message");
 
-var record_toggle = false
+var record_toggle = false;
 record.addEventListener("click", () => {
     if (record_toggle){
-        record_toggle = false
-        alert("녹음이 중지되었습니다.")
+        record_toggle = false;
+        message.innerHTML = "녹음기 버튼을 누르면 녹음이 시작됩니다.";
+        alert("녹음이 중지되었습니다.");
     }
     else{
-        record_toggle = true
-        alert("녹음이 시작되었습니다.")
+        record_toggle = true;
+        message.innerHTML = "녹음기 버튼을 다시 누르면 녹음이 중지됩니다.";
+        alert("녹음이 시작되었습니다.");
     }
 })
 
 save.addEventListener("click", () => {
-    alert("녹음이 정상적으로 저장되었습니다.")
+    alert("녹음이 정상적으로 저장되었습니다.");
     // location.href = "../index.html";
 })
 
 cancel.addEventListener("click", () => {
-    alert("녹음이 취소되었습니다.")
+    alert("녹음이 취소되었습니다.");
     // location.href = "../index.html";
 })
 
@@ -48,10 +51,10 @@ var timer;
 function buttonEvt(){
     record.addEventListener("click",function(){
         if(startFlag){
-            pauseTimer()
+            pauseTimer();
         }
         else{
-            startTimer()
+            startTimer();
         }
     })
     save.addEventListener("click",stopTimer);
@@ -64,7 +67,7 @@ function startTimer(){
         startFlag = true;
         
         if(time==0){
-            init()
+            init();
         }
 
         timer = setInterval(function(){
