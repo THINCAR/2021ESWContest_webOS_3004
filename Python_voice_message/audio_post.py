@@ -15,6 +15,8 @@ file_num = 0
 name_num = 0
 # 녹음 여부    0:녹음중지, 1:녹음시작
 state = 0
+# 저장 여부    0:저장 1:저장취소
+save_state = 0
 
 while True:
     # state_value
@@ -23,6 +25,14 @@ while True:
         data = f.read()
         state = int(data)
         f.close()
+        f = open("state2.txt", 'r')
+        data = f.read()
+        save_state = int(data)
+        f.close()
+        if save_state == 1:
+            f = open("state2.txt", 'w')
+            f.write("0")
+            f.close()
     except ValueError:
         pass
     if state == 1:
@@ -51,6 +61,15 @@ while True:
                 break
             data = stream.read(chunk)
             frames.append(data)
+
+        # 취소하기 눌렀을 시에는 저장하는거 패스시킴.
+        f = open("state2.txt", 'r')
+        data = f.read()
+        save_state = int(data)
+        f.close()
+        if save_state == 1:
+            print("녹음 취소됨")
+            continue
 
         # Save the recorded data as a WAV file
         wf = wave.open(filename, 'wb')

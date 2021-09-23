@@ -41,6 +41,11 @@ io.on('connection', (socket) => {
         fs.writeFileSync('../../Python_voice_message/state.txt', "0");
       }
     });
+
+    socket.on('cancel', () => {
+      fs.writeFileSync('../../Python_voice_message/state.txt', "0");
+      fs.writeFileSync('../../Python_voice_message/state2.txt', "1");
+    });
   });
 
 http.listen(3002, () => {

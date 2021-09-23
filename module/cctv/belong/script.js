@@ -1,5 +1,4 @@
 var record = document.querySelector("#record");
-var save = document.querySelector("#save");
 var cancel = document.querySelector("#cancel");
 var back = document.querySelector("#back");
 var timeStamp = document.querySelector("#time");
@@ -9,24 +8,19 @@ var record_toggle = false;
 record.addEventListener("click", () => {
     if (record_toggle){
         record_toggle = false;
-        message.innerHTML = "녹음기 버튼을 누르면 녹음이 시작됩니다.";
-        alert("녹음이 중지되었습니다.");
+        alert("녹음이 정상적으로 저장되었습니다.");
+        setTimeout(`location.href = "../index.html"`,500);
     }
     else{
         record_toggle = true;
-        message.innerHTML = "녹음기 버튼을 다시 누르면 녹음이 중지됩니다.";
+        message.innerHTML = "녹음기 버튼을 다시 누르면 녹음이 종료됩니다.";
         alert("녹음이 시작되었습니다.");
     }
 })
 
-save.addEventListener("click", () => {
-    alert("녹음이 정상적으로 저장되었습니다.");
-    // location.href = "../index.html";
-})
-
 cancel.addEventListener("click", () => {
     alert("녹음이 취소되었습니다.");
-    // location.href = "../index.html";
+    setTimeout(`location.href = "../index.html"`,500);
 })
 
 back.addEventListener("click", () => {
@@ -57,7 +51,6 @@ function buttonEvt(){
             startTimer();
         }
     })
-    save.addEventListener("click",stopTimer);
     cancel.addEventListener("click",stopTimer);
 }
 

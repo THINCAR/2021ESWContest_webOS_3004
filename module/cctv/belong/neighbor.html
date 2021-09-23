@@ -23,7 +23,6 @@
             </div>
         </div>
         <div class="sub_box">
-            <h3 id="save">저장하기</h3>
             <h3 id="cancel">취소하기</h3>
         </div>
         <div id="back">
@@ -38,6 +37,13 @@
         record.addEventListener('click', function(e) {
             e.preventDefault();
             socket.emit('mouse', 'neighbor');
+        });
+
+        var cancel = document.getElementById('cancel');
+
+        cancel.addEventListener('click', function(e) {
+            e.preventDefault();
+            socket.emit('cancel', 'click cancel!');
         });
     </script>
 </body>
