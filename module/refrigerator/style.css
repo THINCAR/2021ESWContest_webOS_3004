@@ -237,15 +237,16 @@ button:hover{
     color :#fff;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 600;
-
+    font-size: 14px;
+    position: relative;
 }
 
 .menu_button{
     width: 230px;
     height: 40px;
     display: flex;
-    margin-top: 10px;
-
+    position: absolute;
+    bottom: 6px;
 }
 
 .recipe{
@@ -290,7 +291,7 @@ button:hover{
 
 #recipe_inner{
     background-color: white;
-    width: 400px;
+    width: 630px;
     height: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -301,18 +302,25 @@ button:hover{
 
 #exit{
     position: absolute;
+    left: 290px;
     bottom: 10px;
-    left: 175px;
     height: 50px;
+    width: 50px;
 }
 
 #recipe_description{
-    width: 360px;
+    width: 620px;
     height: 330px;
     margin-right: auto;
     margin-left: auto;
     padding-top: 10px;
     font-size: 12px;
+}
+
+.recipe_img{
+    width: 600px;
+    height: 320px;
+    margin-left: 5px;
 }
 
 #video_box{
