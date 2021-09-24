@@ -12,6 +12,7 @@
     "camera.query",
     "notification.management",
     "notification.operation",
-    "tts.operation"
+    "tts.operation",
+    "database.operation"
   ]
 }

@@ -2,6 +2,7 @@ var http = require('http')
 var path = require('path')
 var express = require('express')
 var luna = require('./luna');
+var db = require('./db');
 var multer = require('multer')
 var door_path = '/media/developer/apps/usr/palm/applications/com.domain.tutorial/door1/uploads'
 var refrigerator_path = '/media/developer/apps/usr/palm/applications/com.domain.tutorial/refrigerator1/uploads'
@@ -31,6 +32,7 @@ function init(service){
     var port = 5555;
     app.use(express.static('./'));
     app.use(express.json());
+    app.use(express.static(__dirname + "/refrigerator_client"))
     luna.init(service)
 
     app.post('/upload_door',upload_door.single('file'), (req,res)=>{
@@ -59,27 +61,26 @@ function init(service){
         luna.tts("안녕하세요~");
         console.log("[Request] URI: '/speak'")
     })
+    app.get('/refrigerator',function (req,res){
+        res.sendFile('./index.html',{ root: __dirname + "/refrigerator_client" })
+    })
 
 
     const server = http.createServer(app);
     server.listen(port,() => {
         console.log("Express server has started");
     });
-    const io = require("socket.io")(server, {
-        cors: {
-            origin: "https://localhost:5555",
-        },
-    });
+
+    const io = require("socket.io")(server);
 
     io.on("connection", socket =>{
-        socket.send("Hello!");
-        socket.emit("greetings", "Hey", {"ms":"jane"}, Buffer.from([4,3,3,1]));
-        socket.on("message", (data) =>{
-            console.log(data);
-        });
-        socket.on("salutations", (elem1, elem2, elem3) =>{
-            console.log(elem1, elem2, elem3);
-        });
+        var status = false;
+        var callback = (m)=>{
+            socket.emit("menu",m);
+        }
+        db.findMenubyStatus(status,callback);
+    
+        exports.socket = socket;
     });
 }
 

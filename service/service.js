@@ -10,6 +10,7 @@
 // eslint-disable-next-line import/no-unresolved
 const pkgInfo = require('./package.json');
 const Service = require('webos-service');
+const db = require('./db')
 
 const service = new Service(pkgInfo.name); // Create service by service name on package.json
 const logHeader = "[" + pkgInfo.name + "]";
@@ -55,6 +56,7 @@ service.register("hello", function(message) {
 });
 
 service.register("init", (message)=>{
+    db.init(service);
     server.init(service);
     message.respond({
         returnValue: true
@@ -79,4 +81,29 @@ service.register("fetch", function(message) {
     });
 });
 
-// server.init(service);
+service.register("emit", function(message) {
+    console.log(logHeader, "service called : /emit");
+    var id = message.payload.id;
+    var arg = message.payload.arg;
+    var socket = server.socket;
+    
+    message.respond({
+        returnValue: true
+    });
+});
+
+service.register("update_status", function(message) {
+    console.log(logHeader, "service called : /update_status");
+    var id = message.payload.id;
+    var status = message.payload.status;
+    var callback = (m)=> {
+        var _id = m.payload.results[0]._id;
+        db.updateStatus(_id,status);        
+    }
+    db.findMenubyID(id,callback);
+
+    message.respond({
+        returnValue: true
+    });
+    
+});
