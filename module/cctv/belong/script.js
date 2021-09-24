@@ -3,24 +3,28 @@ var cancel = document.querySelector("#cancel");
 var back = document.querySelector("#back");
 var timeStamp = document.querySelector("#time");
 var message = document.querySelector("#alert_message");
+var snackbar = document.querySelector("#snackbar");
 
 var record_toggle = false;
 record.addEventListener("click", () => {
     if (record_toggle){
         record_toggle = false;
-        alert("녹음이 정상적으로 저장되었습니다.");
-        setTimeout(`location.href = "../index.html"`,500);
+        snackbar.innerHTML = "녹음이 정상적으로 저장되었습니다.";
+        myFunction();
+        setTimeout(`location.href = "../index.html"`,1000);
     }
     else{
         record_toggle = true;
         message.innerHTML = "녹음기 버튼을 다시 누르면 녹음이 종료됩니다.";
-        alert("녹음이 시작되었습니다.");
+        snackbar.innerHTML = "녹음이 시작되었습니다.";
+        myFunction();
     }
 })
 
 cancel.addEventListener("click", () => {
-    alert("녹음이 취소되었습니다.");
-    setTimeout(`location.href = "../index.html"`,500);
+    snackbar.innerHTML = "녹음이 취소되었습니다.";
+    myFunction();
+    setTimeout(`location.href = "../index.html"`,1000);
 })
 
 back.addEventListener("click", () => {
@@ -101,3 +105,9 @@ function stopTimer(){
     init();
     record.style.backgroundColor = "grey";
 }
+
+function myFunction() {
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
+  }
