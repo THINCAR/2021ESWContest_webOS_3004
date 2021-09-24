@@ -2,11 +2,12 @@
 *{
     margin: 0;
     padding: 0;
+	text-decoration: none;
 }
 
 .menu-bar{
     width: 100%;
-    height: 72px;
+    height: 80px;
     background-color: #242424;
     display: flex;
     flex-direction: row;
@@ -15,22 +16,22 @@
 }
 i{
    position:absolute;
-   left:34px;
+   left:38px;
    text-shadow: 2px 2px 1px #000;
-   top:20px;
-   font-size: 35px;
+   top:18px;
+   font-size: 47px;
    color: #fff;
 }
 .button {
     position:absolute;
-    top:20px;
+    top:18px;
     outline: none;
     display: block;
     border:0;
     background-color: #414040;
     font-weight: 600;
     text-shadow: 2px 2px 1px #000;
-    font-size: 25px;
+    font-size: 32px;
     font-family: 'Nanum Gothic', sans-serif;
     color: #fff;
     transition: all 0.5s linear;
@@ -44,68 +45,67 @@ i{
     text-shadow: 0px 0px 0px #000;
 }
 .a{
-    left:488px;
+    left:643px;
 }
 .b{
-    left:555px;
+    left:727px;
 }
 .c{
-	left:692px;
+	left:901px;
 }
 .home-section{
     background-color: #242424;
     width: 100%;
-    height: 408px;
+    height: 520px;
     position: relative;
     z-index: 2;
 }
+/* 현관 */
 .conc{
     position: absolute;
-    left:26px;
+    left:25px;
     top:0px;
     background-color: #414040;
     border-radius: 5px;
-    width: 747px;
-    height: 389px;
+    width: 975px;
+    height: 500px;
 	box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.65);
 }
-*{
-	text-decoration: none;
-  }
 
+/* 음성메세지 */
 .conb{
     position: absolute;
     left:26px;
     top:0px;
     background-color: #414040;
     border-radius: 5px;
-    width: 747px;
-    height: 389px;
+    width: 975px;
+    height: 500px;
 	display:flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
 }
 h1{
-	margin-top: 5px;
+	margin-top: 10px;
 	margin-left: 10px;
-	font-size:28px;
-	height: 28px;
+	font-size:30px;
+	height: 32px;
 	font-family: 'Nanum Gothic', sans-serif;
 	font-weight: 600;
 	color: #fff;
 }
 .list_box{
 	margin-top: 5px;
-	height: 275px;
-	width: 580px;
+	height: 360px;
+	width: 750px;
 	margin-right: auto;
 	margin-left: auto;
 }
 
 .list1{	
 	background-color: rgba(0, 0, 0, 0.7);
-	height: 275px;
+	height: 360px;
 	margin-bottom: 0px;
 	overflow-y: auto;
 	overflow-x: auto;
@@ -138,20 +138,23 @@ h1{
 
 .conb > audio{
     width: 310px;
-	height: 45px;
+	height: 50px;
 	margin-bottom: 5px;
 
 }
+
+/* 방문객 */
+
 .img{
-	width: 600px; 
-	height: 350px;
+	width: 935px; 
+	height: 470px;
 }
 .section {
 	position: absolute; 
 	top:20px; 
 	left:20px;
-	width: 700px;
-	height: 350px;
+	width: 935px;
+	height: 470px;
 }
 .section input[id*="slide"] {
 	display:none;
@@ -198,7 +201,7 @@ h1{
 	position:absolute;
 	z-index:1;
 	top:92%;
-	left:77%;
+	left:80%;
 	transform:
 	translate(-50%,-50%);
 	line-height:1.6;
@@ -206,7 +209,7 @@ h1{
 }
 
 .section .slidelist .textbox p {
-	font-size:24px;
+	font-size:30px;
 	color:#FF4000;
 	opacity:0; 
 	transform:translateY(30px);
