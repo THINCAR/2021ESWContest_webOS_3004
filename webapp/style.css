@@ -16,51 +16,54 @@
 }
 
 .con{
-    width: 275px;
-    height: 350px;
+    width: 350px;
+    height: 440px;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    top:22.5px;
-    left:1px;
+    top:28px;
+    left:4px;
 
 }
 a{
-    width: 265px;
-    height: 112px;
+    width: 350px;
+    height: 140px;
     display: block;
     transition: all 0.5s ease;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
     text-decoration: none;
 
 }
 .refrigerator > a >  p{  
-    padding-top: 45px;
+    padding-top: 60px;
+    width: 340px;
+    height: 80px;
     color: #fff;
     text-align: center;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 600;
-    padding-bottom:45px;
 }
 .heatbath > a > p{
-    padding-top: 45px;
+    padding-top: 60px;
+    width: 340px;
+    height: 80px;
     color: #fff;
     text-align: center;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 600;
-    padding-bottom:45px;
 }
 .door > a > p{  
-    padding-top: 45px;
+    padding-top: 60px;
+    width: 340px;
+    height: 80px;
     color: #fff;
     text-align: center;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 600;
-    padding-bottom:45px;
 }
 
 .refrigerator > a > p:hover{
@@ -82,8 +85,8 @@ a{
     background-color: #fff;
 }
 .refrigerator{  
-    width: 263px;
-    height: 112px;
+    width: 335px;
+    height: 140px;
     background-color: #303030;
     text-align: center;
     display:flex;
@@ -94,8 +97,8 @@ a{
 }
 .heatbath{
     background-color: #303030;
-    width: 263px;
-    height: 112px;
+    width: 335px;
+    height: 140px;
     text-align: center;
     display:flex;
     flex-direction: row;
@@ -105,8 +108,8 @@ a{
 }
 .door{
     background-color: #303030;
-    width: 263px;
-    height: 112px;
+    width: 335px;
+    height: 140px;
     text-align: center;
     display:flex;
     flex-direction: row;
@@ -115,40 +118,40 @@ a{
     border-radius: 3px;
 }
 
-/*  여기 아래부터는 index1.html */
+/*  여기 아래부터는 index.html */
 .container{
     position: relative;
     text-align: center;
-    width: 800px;
-    height: 480px;
+    width: 1024px;
+    height: 600px;
 }
 .back_1{
     position: absolute;
     margin: 0px;
-    width: 800px;
-    height: 480px;
+    width: 1024px;
+    height: 600px;
     box-shadow: inset 0 0 0 1000px rgba(255,255,255,0.1);
 }
 .background{
     position:absolute;
     margin: 0px;
-    width: 800px;
-    height: 480px;
+    width: 1024px;
+    height: 600px;
 }
 .background > img{
-    width: 800px;
-    height: 480px;
+    width: 1024px;
+    height: 600px;
 }
 .back_1{
     position: absolute;
-    width: 800px;
-    height: 480px;
+    width: 1024px;
+    height: 600px;
     box-shadow: inset 0 0 0 1000px rgba(138, 136, 136, 0.3);
 }
 .img_box{
     position:absolute;
     top:10px;
-    left:370px;
+    left:480px;
     width: 40px;
     height: 40px;
 }
@@ -159,11 +162,9 @@ a{
 }
 .login_title1{
     position:absolute;
-    top:160px;
-    left :230px;
+    top:250px;
+    left:353px;
     width: fit-content;
-    margin-right: auto;
-    margin-left: auto;
     font-size: 35px;
     font-weight: 600;
     color: #fff;
@@ -173,11 +174,9 @@ a{
 }
 .login_title2{
     position:absolute;
-    top:160px;
-    left :240px;
+    top:250px;
+    left :361px;
     width: fit-content;
-    margin-right: auto;
-    margin-left: auto;
     font-size: 35px;
     font-weight: 600;
     color: #fff;
