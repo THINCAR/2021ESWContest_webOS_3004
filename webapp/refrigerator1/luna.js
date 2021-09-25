@@ -56,6 +56,13 @@ function fetch(link,path){
     bridge.call(url,params);
 }
 
+function find_all(callback){
+    var url = 'luna://com.domain.tutorial.service/find_all'
+    var params = '{}'
+    bridge.onservicecallback = callback;
+    bridge.call(url,params);
+}
+
 function update_status(id,status){
     var url = 'luna://com.domain.tutorial.service/update_status'
     var params = JSON.stringify({

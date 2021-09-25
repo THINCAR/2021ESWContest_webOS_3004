@@ -5,13 +5,15 @@ const default_data = require("./default_db");
 
 // data
 // {
-//     "name":"수제레몬청",
-//     "img":"lemonade.jpg",
-//     "ingredient":"레몬",
-//     "need":"설탕, 베이킹소다",
+//     "id":1,
+//     "name":"사과 팬케이크",
+//     "img":"applepancake.jpg",
+//     "text":"apple",
+//     "ingredient":"사과",
+//     "need":"핫케이크믹스, 우유, 꿀",
 //     "recipe":"007.jpg",
 //     "youtube":"https://www.youtube.com/embed/RwKND221-HE"
-// },
+// }
 
 
 function init(service){
@@ -83,6 +85,7 @@ function put(data){
                 "id":data.id,
                 "name": data.name,
                 "img": data.img,
+                "text": data.text,
                 "ingredient": data.ingredient,
                 "need": data.need,
                 "recipe": data.recipe,
@@ -142,6 +145,17 @@ function findMenubyStatus(status,callback) {
     ls2.call(url,params,callback)
 }
 
+function findAll(callback) {
+    let url = 'luna://com.webos.service.db/find';
+    let params = {
+        "query":{ 
+            "from":kindID
+        }
+    };
+    ls2.call(url,params,callback)
+}
+
+
 function updateStatus(_id,status){
     let url = 'luna://com.webos.service.db/merge';
     let params = {
@@ -164,4 +178,5 @@ exports.emptyDB = emptyDB;
 exports.put = put;
 exports.findMenubyID = findMenubyID;
 exports.findMenubyStatus = findMenubyStatus;
+exports.findAll = findAll;
 exports.updateStatus = updateStatus;

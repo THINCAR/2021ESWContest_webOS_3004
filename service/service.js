@@ -92,6 +92,17 @@ service.register("emit", function(message) {
     });
 });
 
+service.register("find_all", function(message) {
+    console.log(logHeader, "service called : /find_all");
+    var callback = (m)=> {
+        message.respond({
+            returnValue: true,
+            data: m.payload.results
+        });
+    }
+    db.findAll(callback);
+});
+
 service.register("update_status", function(message) {
     console.log(logHeader, "service called : /update_status");
     var id = message.payload.id;

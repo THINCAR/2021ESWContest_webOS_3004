@@ -55,15 +55,14 @@ function showLightbox2() {
 
 function setButton() {
     var recipes = document.getElementsByClassName("recipe");
-    recipes.forEach((recipe)=>{
-        recipe.addEventListener("click", showLightbox);
-    })
+    for (let item of recipes) {
+        item.addEventListener("click", showLightbox);
+    }
     var kakao = document.getElementsByClassName("to_kakao");
-    kakao.forEach((data)=>{
-        data.addEventListener("click", showLightbox2);
-    })
+    for (let item of kakao) {
+        item.addEventListener("click", showLightbox2);
+    };
 }
-
 
 
 document.getElementById("exit").onclick = function() {

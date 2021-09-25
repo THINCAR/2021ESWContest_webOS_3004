@@ -74,7 +74,7 @@ function init(service){
     const io = require("socket.io")(server);
 
     io.on("connection", socket =>{
-        var status = false;
+        var status = true;
         var callback = (m)=>{
             socket.emit("menu",m);
         }
