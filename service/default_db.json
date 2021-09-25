@@ -1,0 +1,164 @@
+{
+    "data":[
+        {
+            "id":1,
+            "name":"사과 팬케이크",
+            "img":"applepancake.jpg",
+            "text":"apple",
+            "ingredient":"사과",
+            "need":"핫케이크믹스, 우유, 꿀",
+            "recipe":"007.jpg",
+            "youtube":"https://www.youtube.com/embed/RwKND221-HE"
+        },
+        {
+            "id":2,
+            "name":"당근전",
+            "img":"carrotpancake.jpg",
+            "text":"carrot",
+            "ingredient":"당근",
+            "need":"부침가루, 애호박",
+            "recipe":"005.jpg",
+            "youtube":"https://www.youtube.com/embed/n3uJgSekFA0"
+        },
+        {
+            "id":3,
+            "name":"당면계란전",
+            "img":"eggpancake.jpg",
+            "text":"egg",
+            "ingredient":"계란",
+            "need":"당면, 대파, 부추",
+            "recipe":"006.jpg",
+            "youtube":"https://www.youtube.com/embed/UHDwTKw6S2E"
+        },
+        {
+            "id":4,
+            "name":"수제레몬청",
+            "img":"lemonade.jpg",
+            "text":"lemon",
+            "ingredient":"레몬",
+            "need":"설탕, 베이킹소다",
+            "recipe":"003.jpg",
+            "youtube":"https://www.youtube.com/embed/kwI5VQ-cMNw"
+        },
+        {
+            "id":5,
+            "name":"바나나 팬케이크",
+            "img":"bananapancake.png",
+            "text":"banana",
+            "ingredient":"바나나",
+            "need":"핫케이크믹스, 우유",
+            "recipe":"014.jpg",
+            "youtube":"https://www.youtube.com/embed/tKLFKQxeaOU"
+        },
+        {
+            "id":6,
+            "name":"훈제닭가슴살 샐러드",
+            "img":"orangesalad.png",
+            "text":"orange",
+            "ingredient":"오렌지",
+            "need":"닭가슴살, 양파",
+            "recipe":"016.jpg",
+            "youtube":"https://www.youtube.com/embed/XzvFFCVCGF8"
+        },
+        {
+            "id":7,
+            "name":"떠먹는 치즈감자",
+            "img":"potatocheese.png",
+            "text":"potato",
+            "ingredient":"감자",
+            "need":"치즈, 베이컨, 우유",
+            "recipe":"015.jpg",
+            "youtube":"https://www.youtube.com/embed/aLFthsqNjGk"
+        },
+        {
+            "id":8,
+            "name":"브로콜리 새우볶음",
+            "img":"brocolishrimp.png",
+            "text":"broccoli",
+            "ingredient":"브로콜리",
+            "need":"새우, 파프리카",
+            "recipe":"004.jpg",
+            "youtube":"https://www.youtube.com/embed/P3HTlbeZBvo"
+        },
+        {
+            "id":9,
+            "name":"호박 베이컨볶음",
+            "img":"pumpkinbacon.png",
+            "text":"pumpkin",
+            "ingredient":"호박",
+            "need":"베이컨, 다진마늘",
+            "recipe":"008.jpg",
+            "youtube":"https://www.youtube.com/embed/JUWhW4o-BTE"
+        },
+        {
+            "id":10,
+            "name":"토마토 샤브샐러드",
+            "img":"tomatosalad.png",
+            "text":"tomato",
+            "ingredient":"토마토",
+            "need":"돼지고기, 꽈리고추, 양파",
+            "recipe":"009.jpg",
+            "youtube":"https://www.youtube.com/embed/T28MmfD-gBY"
+        },
+        {
+            "id":11,
+            "name":"오이초밥",
+            "img":"cucumberroll.jpeg",
+            "text":"cucumber",
+            "ingredient":"오이",
+            "need":"맛살, 마요네즈",
+            "recipe":"010.jpg",
+            "youtube":"https://www.youtube.com/embed/P0aeboo_MAQ"
+        },
+        {
+            "id":12,
+            "name":"포도푸딩",
+            "img":"grapepuding.png",
+            "text":"grape",
+            "ingredient":"포도",
+            "need":"젤라틴, 설탕",
+            "recipe":"002.jpg",
+            "youtube":"https://www.youtube.com/embed/g1R6Mf5pUXE"
+        },
+        {
+            "id":13,
+            "name":"두부 망고샐러드",
+            "img":"mangosalad.png",
+            "text":"mango",
+            "ingredient":"망고",
+            "need":"두부",
+            "recipe":"013.jpg",
+            "youtube":"https://www.youtube.com/embed/7tpz-b-PDR0"
+        },
+        {
+            "id":14,
+            "name":"새송이버섯 간장버터구이",
+            "img":"mushroombutter.png",
+            "text":"mushroom",
+            "ingredient":"버섯",
+            "need":"버터, 올리고당, 맛술",
+            "recipe":"012.jpg",
+            "youtube":"https://www.youtube.com/embed/XM-K0tn07jk"
+        },
+        {
+            "id":15,
+            "name":"복숭아우유",
+            "img":"peachmilk.png",
+            "text":"peach",
+            "ingredient":"복숭아",
+            "need":"우유, 레몬즙",
+            "recipe":"011.jpg",
+            "youtube":"https://www.youtube.com/embed/Kvz_PwLHtow"
+        },
+        {
+            "id":16,
+            "name":"파인애플 볶음밥",
+            "img":"pineapplerice.png",
+            "text":"pineapple",
+            "ingredient":"파인애플",
+            "need":"새우, 햄, 양파",
+            "recipe":"001.jpg",
+            "youtube":"https://www.youtube.com/embed/a1F_McV39xQ"
+        }
+    ]
+}
