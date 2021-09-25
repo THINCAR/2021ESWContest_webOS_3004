@@ -291,8 +291,8 @@ button:hover{
 #recipe_box{
     background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
-    width: 1024px;
-    height: 600px;
+    width: 800px;
+    height: 480px;
     position: fixed;
     top:0;
     left:0;
@@ -303,8 +303,8 @@ button:hover{
 
 #recipe_inner{
     background-color: white;
-    width: 900px;
-    height: 520px;
+    width: 650px;
+    height: 410px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
@@ -314,32 +314,32 @@ button:hover{
 
 #exit{
     position: absolute;
-    left: 430px;
+    left: 310px;
     bottom: 10px;
     height: 50px;
     width: 50px;
 }
 
 #recipe_description{
-    width: 850px;
-    height: 500px;
+    width: 650px;
+    height: 410px;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 10px;
+    padding-top: 5px;
     font-size: 12px;
 }
 
 .recipe_img{
-    width: 800px;
-    height: 450px;
-    margin-left: 5px;
+    padding-top:5px;
+    width: 650px;
+    height: 340px;
 }
 
 #video_box{
     background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
-    width: 1024px;
-    height: 600px;
+    width: 800px;
+    height: 480px;
     position: fixed;
     top:0;
     left:0;
@@ -350,8 +350,8 @@ button:hover{
 
 #video_inner{
     background-color: white;
-    width: 900px;
-    height: 520px;
+    width: 650px;
+    height: 410px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
@@ -362,13 +362,13 @@ button:hover{
 #exit2{
     position: absolute;
     bottom: 10px;
-    left: 430px;
+    left: 310px;
     height: 50px;
 }
 
 #video_description{
-    width: 800px;
-    height: 450px;
+    width: 650px;
+    height: 410px;
     margin-right: auto;
     margin-left: auto;
     padding-top: 10px;
