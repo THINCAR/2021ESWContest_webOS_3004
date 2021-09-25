@@ -17,7 +17,49 @@
 		<div class="img_box">
 			<i class='bx bxs-lock-alt'></i>
 		</div>
-		<div style="position: absolute; top:30px; left:600px; right: 5px; top: 5px;"><a href="./index2.html" style="color: blue;">index2로 가기(삭제예정)</a></div>
 	</div>
+	<script>
+		var xhttp = new XMLHttpRequest();
+		var link = "http://192.168.0.21:8888/";
+		var path = "auth";
+
+		xhttp.onreadystatechange = function() {
+			if (xhttp.readyState === xhttp.DONE) {
+				if (xhttp.status === 200 || xhttp.status === 201) {
+					var name = xhttp.responseText;
+					console.log(name);
+					if (name == "None" || name == "Unknown"){
+						setTimeout(auth,500);
+					}
+					else {
+						var title = document.querySelector(".login_title1");
+						if (name == "Minkwon"){
+							name = "온민권";
+						}
+						else if (nmae = "Jinwoo"){
+							name = "정진우";
+						}
+						title.innerHTML = `반갑습니다. ${name}님.`;
+						setTimeout(()=>{location.href="./main.html";},5000);
+					}
+				} else {
+					console.error(xhttp.responseText);
+					setTimeout(auth,500);
+				}
+			}
+		};
+
+		function auth(){
+			xhttp.open('GET', link + path);
+			xhttp.send();
+		}
+
+		(event) => {
+
+		}
+
+
+		auth();
+	</script>
 </body>
 </html>
