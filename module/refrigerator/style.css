@@ -11,8 +11,8 @@ body{
 }
 .background{
     margin: 0;
-    width: 1024px;
-    height: 600px;
+    width: 800px;
+    height: 480px;
     position: relative;
 }
 a {
@@ -26,8 +26,8 @@ a {
 
 .wrap{
     position: absolute;
-    width: 1024px;
-    height: 600px;
+    width: 800px;
+    height: 480px;
     top: 0;
     left: 0;
 }
@@ -39,8 +39,8 @@ video{
     position: absolute;
     left :0;
     top:0;
-    width: 1024px;
-    height: 600px;
+    width: 800px;
+    height: 480px;
     box-shadow: inset 0 0 0 1000px rgba(255,255,255,0.1);
 }
 
@@ -51,8 +51,8 @@ video{
     left: 10px;
     top:10px;
     text-align: center;
-    width: 520px;
-    height: 575px;
+    width: 450px;
+    height: 450px;
     border: 3px solid   #393E46;
     background-color:   #393E46;
     box-shadow: 2px 2px 10px 2px rgba(43, 42, 42, 0.3);
@@ -60,11 +60,11 @@ video{
 }
 .con2{
     position: absolute;
-    left: 545px;
+    left: 475px;
     top:10px;
     text-align: center;
-    width: 464px;
-    height: 177.5px;
+    width: 310px;
+    height: 142.5px;
     border: 3px solid  #393E46;
     background-color: #393E46;
     box-shadow: 2px 2px 10px 2px rgba(43, 42, 42, 0.3);
@@ -73,11 +73,11 @@ video{
 
 .con3{
     position: absolute;
-    left: 545px;
-    top:202.5px;
+    left: 475px;
+    top:165.5px;
     text-align: center;
-    width: 464px;
-    height: 177.5px;
+    width: 310px;
+    height: 142.5px;
     border: 3px solid  #393E46;
     background-color: #393E46;
     box-shadow: 2px 2px 10px 2px rgba(43, 42, 42, 0.3);
@@ -85,11 +85,11 @@ video{
 }
 .con4{
     position: absolute;
-    left: 545px;
-    top:395px;
+    left: 475px;
+    top:320.5px;
     text-align: center;
-    width: 464px;
-    height: 189.5px;
+    width: 310px;
+    height: 142.5px;
     border: 3px solid  #393E46;
     background-color: #393E46;
     box-shadow: 2px 2px 10px 2px rgba(43, 42, 42, 0.3);
@@ -100,8 +100,8 @@ button{
     border:0;
     font-size: 15px;
     line-height: 1;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s linear;
@@ -109,25 +109,25 @@ button{
 }
 i{
     color:#fff;
-    font-size: 25px;
+    font-size: 20px;
 }
 button:hover{
       background-color:  #FFD369  ;
 }
 .nick{
     position: absolute;
-    line-height: 177.5px;
+    line-height: 142.5px;
     left:25px;
-    font-size: 28px;
+    font-size: 20px;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 600;
     color: #fff;
 }
 .nicka{
     position: absolute;
-    line-height: 189.5px;
-    left:25px;
-    font-size: 28px;
+    line-height: 142.5px;
+    left:35px;
+    font-size: 20px;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 600;
     color: #fff;
@@ -136,10 +136,10 @@ button:hover{
     position: absolute;
     width: 36px;
     height: 40px;
-    top:70px;
-    left:275px;
+    top:60px;
+    left:155px;
     text-align: right;
-    font-size: 25px;
+    font-size: 20px;
     color: #fff;
     font-weight: 600;
 }
@@ -147,29 +147,29 @@ button:hover{
     position: absolute;
     width: 30px;
     height: 40px;
-    top:70px;
-    left:320px;
+    top:60px;
+    left:200px;
     text-align: left;
-    font-size: 25px;
+    font-size: 20px;
     color: #fff;
     font-weight: 600;
 }
 .up{
     position: absolute;
-    top:64px;
-    left:195px;
+    top:54px;
+    left:110px;
 }
 .down{
     position: absolute;
-    top:64px;
-    left:380px;
+    top:54px;
+    left:240px;
 }
 .toggle-btn{
     position: absolute;
-    left:195px;
-    top:67px;
-    width: 220px;
-    height: 45px;
+    left:110px;
+    top:48px;
+    width: 160px;
+    height: 35px;
     background:  #5f6369;
     border-radius: 30px;
     padding:5px;
@@ -177,8 +177,8 @@ button:hover{
     transition: all 0.3s ease-in-out;
 }
 .toggle-btn > .inner-circle{
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     background: #fff;
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
@@ -187,20 +187,20 @@ button:hover{
     background: #FFD369;
 }
 .toggle-btn.active> .inner-circle{
-    margin-left:175px;
+    margin-left:122.5px;
   
 }
 .stage{
     position: absolute;
     left:10px;
     top:5px;
-    width: 500px;
-    height: 450px;
+    width: 430px;
+    height: 440px;
 }
 
 .menu_title{
     width: fit-content;
-    font-size: 14px;
+    font-size: 12px;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 3px;
@@ -212,8 +212,8 @@ button:hover{
 
 #menu_list{
     background-color: #5f6369;
-    width: 480px;
-    height: 510px;
+    width: 430px;
+    height: 390px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 14px;
@@ -222,13 +222,13 @@ button:hover{
 }
 
 .menu{
-    width: 480px;
-    height: 150px;
+    width: 430px;
+    height: 140px;
 }
 
 .menu_image{
-    height: 150px;
-    width: 150px;
+    height: 140px;
+    width: 140px;
     margin-top: 10px;
     margin-left: 10px;
     float: left;
@@ -238,8 +238,8 @@ button:hover{
 .menu_description{
     background-color: #eeeeee79;
     text-align: left;
-    height: 130px;
-    width: 280px;
+    height: 120px;
+    width: 230px;
     margin-top: 10px;
     margin-left: 10px;
     float: left;
@@ -248,7 +248,7 @@ button:hover{
     color :#fff;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 15px;
     position: relative;
 }
 
@@ -262,12 +262,12 @@ button:hover{
 
 .recipe{
     background-color:  #FFD369;
-    width: 120px;
-    height: 45px;
+    width: 90px;
+    height: 40px;
     margin-right: 5px;
     border-radius: 10px;
-    line-height: 45px;
-    font-size: 17px;
+    line-height: 40px;
+    font-size: 14px;
     font-family: 'Nanum Gothic', sans-serif;
     text-align: center;
     color: #171717;
@@ -277,11 +277,11 @@ button:hover{
 
 .to_kakao{
     background-color: #eeeeee;
-    width: 165px;
-    height: 45px;
-    font-size: 17px;
+    width: 130px;
+    height: 40px;
+    font-size: 14px;
     border-radius: 10px;
-    line-height: 45px;
+    line-height: 40px;
     font-family: 'Nanum Gothic', sans-serif;
     text-align: center;
     color: #171717;
