@@ -43,12 +43,12 @@ a > i{
 .concen{
   position: absolute;
   width: 410px;
-  height: 200px;
+  height: 205px;
   border: 3.5px solid #DBD3D3;
   border-radius: 8px;
   background:#414040;
   left: 7px;
-  top:25px;
+  top:275px;
 }
 .gb1{
   position: absolute;
@@ -95,8 +95,8 @@ a > i{
 }
 .namec{
   position: absolute;
-  top:5px;
-  left: 140px;
+  top:250px;
+  left: 135px;
   padding: 10px;
   font-size: 27px;
   color:#fff;
@@ -104,19 +104,65 @@ a > i{
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 600;
   text-shadow:0.5px 0.5px 5px #000;
-  width:140px;
+  width:150px;
   height: 30px;
   text-align: center;
 }
-.iot{
+.eye{
   position: absolute;
   width: 410px;
-  height: 220px;
+  height: 205px;
   border: 3.5px solid #DBD3D3;
   border-radius: 8px;
   background:#414040;
   left: 7px;
-  top:260px;
+  top:25px;
+}
+.eye_good{
+  position: absolute;
+  left: 150px;
+  top:40px;
+  padding: 10px;
+  background: #00ca3c;
+  width: 100px;
+  height: 100px;
+  border-radius: 75px;
+}
+
+.eye_bad{
+  position: absolute;
+  left: 150px;
+  top:40px;
+  padding: 10px;
+  background: #ca0000;
+  width: 100px;
+  height: 100px;
+  border-radius: 75px;
+}
+
+.eye1{
+  position: absolute;
+  top:44px;
+  left: 22px;
+  font-weight: 600;
+  width: 75px;
+  color: #000;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+.eye2{
+  position: absolute;
+  top:44px;
+  left: 22px;
+  margin-right: auto;
+  font-weight: 600;
+  width: 75px;
+  color: #000;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 25px;
+  text-align: center;
 }
 .iot  .toggle-btn{
   position: absolute;
@@ -202,8 +248,8 @@ input[type="checkbox"]:checked + label::after {
 }
 .namei{
   position: absolute;
-  top:245px;
-  left: 105px;
+  top:5px;
+  left: 150px;
   padding: 10px;
   font-size: 27px;
   color:#fff;
@@ -211,7 +257,7 @@ input[type="checkbox"]:checked + label::after {
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 600;
   text-shadow:0.5px 0.5px 5px #000;
-  width:210px;
+  width:130px;
   height: 30px;
   text-align: center;
 }
