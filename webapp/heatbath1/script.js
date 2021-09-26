@@ -1,4 +1,3 @@
-
 bath_link = "http://192.168.0.45/"
 heat_link = "http://192.168.0.35/"
 
@@ -158,3 +157,73 @@ function menuBtnChange() {
 
 $('#aa').show();
 $('#bb').hide();
+
+
+// update
+var xhttp_1 = new XMLHttpRequest();
+var link = "http://192.168.0.21:8888/";
+
+xhttp_1.onreadystatechange = () => {
+    if (xhttp_1.readyState === xhttp_1.DONE) {
+        if (xhttp_1.status === 200 || xhttp_1.status === 201) {
+            var status = xhttp_1.responseText;
+            if (status == "0"){
+                $('.eye_good').show()
+                $('.eye_bad').hide()
+            }
+            else if(status == "1"){
+                $('.eye_good').hide()
+                $('.eye_bad').show()
+            }
+        } else {
+            console.error(xhttp_1.responseText);
+        }
+        setTimeout(detect,200);
+    }
+};
+
+function detect(){
+    xhttp_1.open('GET', link + "detect");
+    xhttp_1.send();
+}
+detect();
+
+
+var xhttp_2 = new XMLHttpRequest();
+var link = "http://192.168.0.21:8888/";
+
+xhttp_2.onreadystatechange = () => {
+    if (xhttp_2.readyState === xhttp_2.DONE) {
+        if (xhttp_2.status === 200 || xhttp_2.status === 201) {
+            var status = xhttp_2.responseText;
+            if (status == "0"){
+                $('.gb1').show()
+                $('.gb2').hide()
+            }
+            else if(status == "1"){
+                $('.gb1').hide()
+                $('.gb2').show()
+                warning();
+            }
+        } else {
+            console.error(xhttp_2.responseText);
+        }
+        setTimeout(attitude,200);
+    }
+};
+
+function attitude(){
+    xhttp_2.open('GET', link + "attitude");
+    xhttp_2.send();
+}
+
+attitude();
+
+var warning_flag = true
+
+function warning(){
+    if (warning_flag){
+        testTTS("집중도가 떨어집니다. 집중해주세요!");
+        warning_flag = false;
+    }
+}

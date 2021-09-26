@@ -31,7 +31,8 @@ function testTTS(text){
     var url = 'luna://com.webos.service.tts/speak'
     var params = JSON.stringify({
         "text": text,
-        "clear":true
+        "clear":true,
+        "language":"ko-KR"
     })
     bridge.onservicecallback = default_callback;
     bridge.call(url,params);
