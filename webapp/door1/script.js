@@ -43,14 +43,6 @@ function doShow3(){
 }
 window.onload = function() {
 
-
-    module_link = "http://192.168.0.35/"
-
-
-    let btn_a = document.querySelector("#button_a")
-    let btn_b = document.querySelector("#button_b")
-
-
     for (i=0; i<10; i++) {
         file = "./uploads/name" + i + ".txt";
         var rawFile = new XMLHttpRequest();
