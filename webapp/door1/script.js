@@ -14,7 +14,7 @@ function doShow1(){
         $('#cc').hide(); 
         $('#bb').hide();
         $('#aa').show();
-        var client = new WebSocket('ws://192.168.0.21:9999');
+        var client = new WebSocket('ws://192.168.0.20:9999');
         var canvas = document.querySelector('canvas');
         var player = new jsmpeg(client, {
 		    canvas: canvas

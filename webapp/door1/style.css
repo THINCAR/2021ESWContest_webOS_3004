@@ -71,6 +71,13 @@ i{
     height: 500px;
 	box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.65);
 }
+canvas{
+	position: absolute;
+    left: 20px;
+	top: 10px;
+	width: 935px;
+	height: 480px;
+}
 
 /* 음성메세지 */
 .conb{
