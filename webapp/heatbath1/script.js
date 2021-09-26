@@ -1,5 +1,5 @@
 
-bath_link = "http://192.168.0.35/"
+bath_link = "http://192.168.0.45/"
 heat_link = "http://192.168.0.35/"
 
 let sidebar = document.querySelector(".sidebar");
@@ -41,8 +41,8 @@ bathSwitch.addEventListener("click", (e)=>{
         $('.water1').siblings().removeClass('active3');
         water1.classList.add('active3');
         waterLevel.addEventListener("click",waterLevelEvent)
-
-        fetch(bath_link,"waterlow");
+        fetch(bath_link,"watera");
+        fetch(bath_link,"waterone");
     }
     else{
         $('li').siblings().removeClass('active2')
@@ -50,7 +50,7 @@ bathSwitch.addEventListener("click", (e)=>{
         
         $('li').siblings().removeClass('active3')
         waterLevel.removeEventListener("click",waterLevelEvent)
-        fetch(bath_link,"watermid");
+        fetch(bath_link,"turnoff");
     }
     console.log(target)
 })
@@ -106,19 +106,19 @@ function tempLevelEvent(e){
     target.classList.add('active2');
     console.log(target)
     if(target.classList.contains("temp1")){
-        fetch(bath_link,"one");
+        fetch(bath_link,"waterone");
     };
     if(target.classList.contains("temp2")){
-        fetch(bath_link,"two");
+        fetch(bath_link,"watertwo");
     };
     if(target.classList.contains("temp3")){
-        fetch(bath_link,"three");
+        fetch(bath_link,"waterthree");
     };
     if(target.classList.contains("temp4")){
-        fetch(bath_link,"four");
+        fetch(bath_link,"waterfour");
     };
     if(target.classList.contains("temp5")){
-        fetch(bath_link,"five");
+        fetch(bath_link,"waterfive");
     };
 }
 
@@ -131,19 +131,19 @@ function waterLevelEvent(e){
     target.classList.add('active3');
     console.log(target)
     if(target.classList.contains("water1")){
-        fetch(bath_link,"one");
+        fetch(bath_link,"watera");
     };
     if(target.classList.contains("water2")){
-        fetch(bath_link,"two");
+        fetch(bath_link,"waterb");
     };
     if(target.classList.contains("water3")){
-        fetch(bath_link,"three");
+        fetch(bath_link,"waterc");
     };
     if(target.classList.contains("water4")){
-        fetch(bath_link,"four");
+        fetch(bath_link,"waterd");
     };
     if(target.classList.contains("water5")){
-        fetch(bath_link,"five");
+        fetch(bath_link,"watere");
     };
 }
 
