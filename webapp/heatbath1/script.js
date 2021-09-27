@@ -159,65 +159,102 @@ $('#aa').show();
 $('#bb').hide();
 
 
+var attitude = 100;
+var drowsiness = 0;
+var attitude_progress = document.querySelector("#attitude");
+var drowsiness_progress = document.querySelector("#drowsiness");
+var attitude_text = document.querySelector("#attitude_text");
+var drowsiness_text = document.querySelector("#drowsiness_text");
+
 // update
 var xhttp_1 = new XMLHttpRequest();
 var link = "http://192.168.0.21:8888/";
+
+function drowsiness_change(status){
+    console.log("Drowsiness: " + status);
+    if (status == "0"){
+        if (drowsiness>0) {drowsiness -= 1;}
+    }
+    else if(status == "1"){
+        if (drowsiness<100) {drowsiness += 1;}
+    }
+    drowsiness_progress.style.strokeDashoffset = 80 - (drowsiness/100 * 80)
+    if (drowsiness<33){
+        drowsiness_text.style.color="#04c";
+    }
+    else if(drowsiness<66){
+        drowsiness_text.style.color="#0c4";
+    }
+    else{
+        drowsiness_text.style.color="#c44";
+    }
+    drowsiness_text.innerHTML = drowsiness.toString();
+}
 
 xhttp_1.onreadystatechange = () => {
     if (xhttp_1.readyState === xhttp_1.DONE) {
         if (xhttp_1.status === 200 || xhttp_1.status === 201) {
             var status = xhttp_1.responseText;
-            if (status == "0"){
-                $('.eye_good').show()
-                $('.eye_bad').hide()
-            }
-            else if(status == "1"){
-                $('.eye_good').hide()
-                $('.eye_bad').show()
-            }
+            drowsiness_change(status);
+            setTimeout(()=>{drowsiness_change(status)},100);
         } else {
             console.error(xhttp_1.responseText);
         }
-        setTimeout(detect,200);
+        setTimeout(get_drowsiness,200);
     }
 };
 
-function detect(){
+function get_drowsiness(){
     xhttp_1.open('GET', link + "detect");
     xhttp_1.send();
 }
-detect();
+get_drowsiness();
 
 
 var xhttp_2 = new XMLHttpRequest();
 var link = "http://192.168.0.21:8888/";
 
+function attitude_change(status){
+    console.log("Attitude: " + status);
+    if (status == "0"){
+        if (attitude<100) {attitude += 1;}
+    }
+    else if(status == "1"){
+        if (attitude>0) {attitude -= 1;}
+        if (attitude<50){warning();}
+    }
+    attitude_progress.style.strokeDashoffset = attitude/100 * 80;
+    if (attitude<33){
+        attitude_text.style.color="#c44";
+    }
+    else if(attitude<66){
+        attitude_text.style.color="#0c4";
+    }
+    else{
+        attitude_text.style.color="#04c";
+    }
+    attitude_text.innerHTML = attitude.toString();
+}
+
 xhttp_2.onreadystatechange = () => {
     if (xhttp_2.readyState === xhttp_2.DONE) {
         if (xhttp_2.status === 200 || xhttp_2.status === 201) {
             var status = xhttp_2.responseText;
-            if (status == "0"){
-                $('.gb1').show()
-                $('.gb2').hide()
-            }
-            else if(status == "1"){
-                $('.gb1').hide()
-                $('.gb2').show()
-                warning();
-            }
+            attitude_change(status);
+            setTimeout(()=>{attitude_change(status)},100);
         } else {
             console.error(xhttp_2.responseText);
         }
-        setTimeout(attitude,200);
+        setTimeout(get_attitude,200);
     }
 };
 
-function attitude(){
+function get_attitude(){
     xhttp_2.open('GET', link + "attitude");
     xhttp_2.send();
 }
 
-attitude();
+get_attitude();
 
 var warning_flag = true
 

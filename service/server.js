@@ -38,6 +38,7 @@ function init(service){
     app.post('/upload_door',upload_door.single('file'), (req,res)=>{
         console.log(req)
         console.log("[Request] URI: '/upload_door'")
+        luna.toast("방문자 음성메시지가 도착 하였습니다.")
         res.sendStatus(200)
     });
     app.post('/upload_ref',upload_refrigerator.single('file'),(req,res)=>{

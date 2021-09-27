@@ -70,7 +70,7 @@ a > i{
   height: 100px;
   border-radius: 75px;
 }
-.bad{
+/* .bad{
   position: absolute;
   top:44px;
   left: 22px;
@@ -91,8 +91,8 @@ a > i{
   color: #000;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 25px;
-  text-align: center;
-}
+  text-align: center; */
+/* } */
 .namec{
   position: absolute;
   top:250px;
@@ -118,6 +118,7 @@ a > i{
   left: 7px;
   top:25px;
 }
+/*
 .eye_good{
   position: absolute;
   left: 150px;
@@ -163,20 +164,49 @@ a > i{
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 25px;
   text-align: center;
+} */
+.num_text{
+  position: absolute;
+  top:90px;
+  text-align: center;
+  left: 145px;
+  padding:10px;
+  font-size: 50px;
+  color:#fff;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 600;
+  width: 100px;
+  height: 40px;
+}
+svg {
+  height: 40vh;
+  margin: auto;
+  display: block;
+}
+
+path {
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+
+path.purple {
+  stroke-dasharray: calc(20 * 3.142 * 1.5);
+  stroke-dashoffset: 0;
+  /* adjust last number for variance */
 }
 
 .namei{
   position: absolute;
   top:5px;
-  left: 150px;
+  left: 130px;
   padding: 10px;
-  font-size: 27px;
+  font-size: 24px;
   color:#fff;
   background: #414040;
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 600;
   text-shadow:0.5px 0.5px 5px #000;
-  width:130px;
+  width:160px;
   height: 30px;
   text-align: center;
 }

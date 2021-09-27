@@ -18,21 +18,39 @@
     <section class="home-section">
 		<div class="cona">
 			<div class="eye">
-				<div class="eye_good">
-					<div class="eye1">정상</div>
-				</div>
-				<div class="eye_bad">
-					<div class="eye2">위험</div>
-				</div>
+				<div class="num_text" id="drowsiness_text">19</div>
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 100 100">
+					<defs>
+						<linearGradient id="linear_1" x1="0%" y1="0%" x2="100%" y2="0%">
+							<stop offset="0%"   stop-color="#04e" stop-opacity="1" />
+							<stop offset="50%" stop-color="#c8c8c8" stop-opacity="1" />
+							<stop offset="100%" stop-color="#c8c8c8" stop-opacity="1.0" />
+						</linearGradient>
+						<linearGradient id="linear_2" x1="0%" y1="0%" x2="100%" y2="0%">
+							<stop offset="0%"   stop-color="#04e" stop-opacity="0.5" />
+							<stop offset="50%" stop-color="#0e4" stop-opacity="0.75" />
+							<stop offset="100%" stop-color="#e44" stop-opacity="1.0" />
+						</linearGradient>
+					</defs>
+					<path class="grey" d="M20,45
+							A20,20 0 1,1 80,45"
+							style="fill:none;" stroke="url(#linear_1)"/>
+					<path id="drowsiness" class="purple" d="M20,45
+							A20,20 0 1,1 80,45"
+							style="fill:none;" stroke="url(#linear_2)"/>		
+				</svg>
 			</div>
-			<div class="namei">졸음 운전</div>
+			<div class="namei">졸음 운전 지수</div>
 			<div class="concen">
-				<div class="gb1">
-					<div class="good">좋음</div>
-				</div>
-				<div class="gb2">
-					<div class="bad">나쁨</div>
-				</div>
+				<div class="num_text" id="attitude_text">0</div>
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 100 100">
+					<path class="grey" d="M20,45
+							A20,20 0 1,1 80,45"
+							style="fill:none;" stroke="url(#linear_1)"/>
+					<path id="attitude" class="purple" d="M20,45
+							A20,20 0 1,1 80,45"
+							style="fill:none;" stroke="url(#linear_2)"/>
+				</svg>
 			</div>
 			<div class="namec">주행 집중도</div>
 		</div>
@@ -45,7 +63,7 @@
 				<div class="inner-circle"></div>
 			</div>
 			<ul class="a" id="heat_level">
-				<li class="heat1 active1">
+				<li class="heat1">
 					<button onclik="">1</button>
 				</li>
 				<li class="heat2">
@@ -72,7 +90,7 @@
 				<div class="inner-circle"></div>
 			</div>  
 			<ul class="b" id="temp_level">
-				<li class="temp1 active2">
+				<li class="temp1">
 					<button onclik="">1</button>
 				</li>
 				<li class="temp2">
@@ -89,7 +107,7 @@
 				</li>
 			</ul> 
 			<ul class="c" id="water_level">
-				<li class="water1 active3">
+				<li class="water1">
 					<button onclik="">1</button>
 				</li>
 				<li class="water2">
