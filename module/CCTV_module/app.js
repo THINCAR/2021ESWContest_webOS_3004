@@ -14,20 +14,20 @@ app.get('/voice_message.html', (req, res) => {
     res.sendFile(__dirname + '/voice_message.html');
 });
 
-app.get('/belong/parcel.html', (req, res) => {
-    res.sendFile(__dirname + '/belong/parcel.html');
+app.get('/UI/parcel.html', (req, res) => {
+    res.sendFile(__dirname + '/UI/parcel.html');
 });
 
-app.get('/belong/meter_reading.html', (req, res) => {
-    res.sendFile(__dirname + '/belong/meter_reading.html');
+app.get('/UI/meter_reading.html', (req, res) => {
+    res.sendFile(__dirname + '/UI/meter_reading.html');
 });
 
-app.get('/belong/neighbor.html', (req, res) => {
-    res.sendFile(__dirname + '/belong/neighbor.html');
+app.get('/UI/neighbor.html', (req, res) => {
+    res.sendFile(__dirname + '/UI/neighbor.html');
 });
 
-app.get('/belong/public.html', (req, res) => {
-    res.sendFile(__dirname + '/belong/public.html');
+app.get('/UI/public.html', (req, res) => {
+    res.sendFile(__dirname + '/UI/public.html');
 });
 
 io.on('connection', (socket) => {
