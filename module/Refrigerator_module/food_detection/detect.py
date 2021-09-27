@@ -27,8 +27,11 @@ from utils.general import check_img_size, check_requirements, check_imshow, colo
 from utils.plots import colors, plot_one_box
 from utils.torch_utils import select_device, load_classifier, time_sync
 
-food = {"사과": 0, "바나나": 0, "오렌지": 0, "감자": 0, "브로콜리": 0, "양배추": 0, "칸탈루프": 0, "당근": 0, "호박": 0, "토마토": 0, "오이": 0,
-        "계란": 0, "포도": 0, "레몬": 0, "망고": 0, "버섯": 0, "복숭아": 0, "배": 0, "파인애플": 0}
+food = {"사과": 0, "바나나": 0, "오렌지": 0, "감자": 0, "브로콜리": 0, "양배추": 0, "칸탈루프": 0, "당근": 0, "호박": 0, "토마토": 0, 
+"오이": 0,"계란": 0, "포도": 0, "레몬": 0, "망고": 0, "버섯": 0, "복숭아": 0, "배": 0, "파인애플": 0}
+food2 = {"apple": 0, "banana": 0, "orange": 0, "potato": 0, "broccoli": 0, "cabbage": 0, "cantaloupe": 0,"carrot": 0,
+"pumpkin": 0, "tomato":0, "cucumber": 0,"egg": 0, "grape": 0,"lemon": 0, "mango": 0,"mushroom": 0, "peach": 0,"pear": 0,
+"pineapple": 0}
 result_image_path = {"path": "none"}
 
 @torch.no_grad()
@@ -153,42 +156,61 @@ def run(weights='yolov5s.pt',  # model.pt path(s)
                     s += f"{n} {names[int(c)]}{'s' * (n > 1)}, "  # add to string
                     if names[int(c)] == "Apple":
                         food["사과"] = int(n)
+                        food2["apple"] = int(n)
                     elif names[int(c)] == "Banana":
                         food["바나나"] = int(n)
+                        food2["banana"] = int(n)
                     elif names[int(c)] == "Orange":
                         food["오렌지"] = int(n)
+                        food2["orange"] = int(n)
                     elif names[int(c)] == "Potato":
                         food["감자"] = int(n)
+                        food2["potato"] = int(n)
                     elif names[int(c)] == "Broccoli":
                         food["브로콜리"] = int(n)
+                        food2["broccoli"] = int(n)
                     elif names[int(c)] == "Cabbage":
                         food["양배추"] = int(n)
+                        food2["cabbage"] = int(n)
                     elif names[int(c)] == "Cantaloupe":
                         food["칸탈루프"] = int(n)
+                        food2["cantaloupe"] = int(n)
                     elif names[int(c)] == "Carrot":
+                        food2["carrot"] = int(n)
                         food["당근"] = int(n)
                     elif names[int(c)] == "Pumpkin":
                         food["호박"] = int(n)
+                        food2["pumpkin"] = int(n)
                     elif names[int(c)] == "Tomato":
                         food["토마토"] = int(n)
+                        food2["tomato"] = int(n)
                     elif names[int(c)] == "Cucumber":
                         food["오이"] = int(n)
+                        food2["cucumber"] = int(n)
                     elif names[int(c)] == "Egg":
                         food["계란"] = int(n)
+                        food2["egg"] = int(n)
                     elif names[int(c)] == "Grape":
                         food["포도"] = int(n)
+                        food2["grape"] = int(n)
                     elif names[int(c)] == "Lemon":
                         food["레몬"] = int(n)
+                        food2["lemon"] = int(n)
                     elif names[int(c)] == "Mango":
                         food["망고"] = int(n)
+                        food2["mango"] = int(n)
                     elif names[int(c)] == "Mushroom":
                         food["버섯"] = int(n)
+                        food2["mushroom"] = int(n)
                     elif names[int(c)] == "Peach":
                         food["복숭아"] = int(n)
+                        food2["peach"] = int(n)
                     elif names[int(c)] == "Pear":
                         food["배"] = int(n)
+                        food2["pear"] = int(n)
                     elif names[int(c)] == "Pineapple":
                         food["파인애플"] = int(n)
+                        food2["pineapple"] = int(n)
 
                 # Write results
                 for *xyxy, conf, cls in reversed(det):
@@ -248,8 +270,8 @@ def parse_opt(path):
     parser = argparse.ArgumentParser()
     parser.add_argument('--weights', nargs='+', type=str, default='best.pt', help='model.pt path(s)')
     parser.add_argument('--source', type=str, default=path, help='file/dir/URL/glob, 0 for webcam')
-    parser.add_argument('--imgsz', '--img', '--img-size', type=int, default=416, help='inference size (pixels)')
-    parser.add_argument('--conf-thres', type=float, default=0.4, help='confidence threshold')
+    parser.add_argument('--imgsz', '--img', '--img-size', type=int, default=540, help='inference size (pixels)')
+    parser.add_argument('--conf-thres', type=float, default=0.1, help='confidence threshold')
     parser.add_argument('--iou-thres', type=float, default=0.45, help='NMS IoU threshold')
     parser.add_argument('--max-det', type=int, default=1000, help='maximum detections per image')
     parser.add_argument('--device', default='', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
@@ -286,7 +308,6 @@ time.sleep(0.2)
 while True:
     # if문 조건을 냉장고모듈 사이트에 접속할 때의 신호를 받을 때만 작동하게끔 수정필요
     if True:
-        # camera.py 내용 수정필요(보드 카메라모듈에 맞게끔)
         frame = camera.get_frame()
 
         # Resize frame of video to 1/4 size(식재료를 잘 인식못할 경우 수정해볼 필요 있을 듯)
@@ -303,7 +324,7 @@ while True:
         main(opt)
 
         try:
-            url = 'http://192.168.0.69:5555/upload_ref'
+            url = 'http://192.168.0.72:5555/upload_ref'
 
             with open("food_list.txt", 'w') as f:
                 for key in list(food.keys()):
@@ -312,9 +333,9 @@ while True:
             files = {'file': open("food_list.txt", 'rb')}
             r = requests.post(url, files=files)
 
-            for i in list(food.keys()):
+            for i in list(food2.keys()):
                 with open(i + ".txt", 'w') as f:
-                    f.write(str(food[i]))
+                    f.write(str(food2[i]))
                 files = {'file': open(i + ".txt", 'rb')}
                 r = requests.post(url, files=files)
 
@@ -323,10 +344,9 @@ while True:
 
             if r.status_code == 200:
                 print("전송 성공")
+                time.sleep(10)
             else:
                 print("전송 실패")
         except:
             print("전송 실패")
 
-    # 삭제예정
-    break
