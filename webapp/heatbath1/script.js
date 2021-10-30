@@ -1,5 +1,6 @@
-bath_link = "http://192.168.0.45/"
-heat_link = "http://192.168.0.35/"
+var bath_link = "http://192.168.0.45/"
+var heat_link = "http://192.168.0.35/"
+var auth_link = "http://192.168.0.21:8888/";
 
 let sidebar = document.querySelector(".sidebar");
 let bathSwitch = document.querySelector("#bath_onoff")
@@ -168,7 +169,6 @@ var drowsiness_text = document.querySelector("#drowsiness_text");
 
 // update
 var xhttp_1 = new XMLHttpRequest();
-var link = "http://192.168.0.21:8888/";
 
 function drowsiness_change(status){
     console.log("Drowsiness: " + status);
@@ -205,14 +205,14 @@ xhttp_1.onreadystatechange = () => {
 };
 
 function get_drowsiness(){
-    xhttp_1.open('GET', link + "detect");
+    xhttp_1.open('GET', auth_link + "detect");
     xhttp_1.send();
 }
 get_drowsiness();
 
 
 var xhttp_2 = new XMLHttpRequest();
-var link = "http://192.168.0.21:8888/";
+
 
 function attitude_change(status){
     console.log("Attitude: " + status);
@@ -250,7 +250,7 @@ xhttp_2.onreadystatechange = () => {
 };
 
 function get_attitude(){
-    xhttp_2.open('GET', link + "attitude");
+    xhttp_2.open('GET', auth_link + "attitude");
     xhttp_2.send();
 }
 
@@ -260,7 +260,7 @@ var warning_flag = true
 
 function warning(){
     if (warning_flag){
-        testTTS("집중도가 떨어집니다. 집중해주세요!");
+        testTTS("피곤하시면 미리 홈 IoT 기기를 실행시키는건 어떠세요?");
         warning_flag = false;
     }
 }

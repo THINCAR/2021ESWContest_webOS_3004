@@ -1,10 +1,10 @@
+cctv_link = 'ws://192.168.0.20:9999'
+
 function select(num) {
     document.getElementById("audio").src = './uploads/result' + num + '.wav'
 }
 
-$('#aa').show();
-$('#bb').hide();
-$('#cc').hide(); 
+doShow1()
 
 function doShow1(){
     if ($('#aa').is(":visible")) { 
@@ -14,7 +14,7 @@ function doShow1(){
         $('#cc').hide(); 
         $('#bb').hide();
         $('#aa').show();
-        var client = new WebSocket('ws://192.168.0.20:9999');
+        var client = new WebSocket(cctv_link);
         var canvas = document.querySelector('canvas');
         var player = new jsmpeg(client, {
 		    canvas: canvas

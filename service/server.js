@@ -38,7 +38,6 @@ function init(service){
     app.post('/upload_door',upload_door.single('file'), (req,res)=>{
         console.log(req)
         console.log("[Request] URI: '/upload_door'")
-        luna.toast("방문자 음성메시지가 도착 하였습니다.")
         res.sendStatus(200)
     });
     app.post('/upload_ref',upload_refrigerator.single('file'),(req,res)=>{
@@ -57,9 +56,16 @@ function init(service){
         luna.toast("'/hi' is requested from client")
         console.log("[Request] URI: '/hi'");
     })
-    app.get('/speak',function (req, res){
+    app.get('/visitor_update',function (req, res){
         res.send('<p> speaking~ </p>');
-        luna.tts("안녕하세요~");
+        luna.tts("방문자 음성메시지가 도착 하였습니다.");
+        luna.toast("방문자 음성메시지가 도착 하였습니다.")
+        console.log("[Request] URI: '/speak'")
+    })
+    app.get('/detection_update',function (req, res){
+        res.send('<p> speaking~ </p>');
+        luna.tts("현관에 사람이 감지 되었습니다.");
+        luna.toast("현관에 사람이 감지 되었습니다.")
         console.log("[Request] URI: '/speak'")
     })
     app.get('/refrigerator',function (req,res){
