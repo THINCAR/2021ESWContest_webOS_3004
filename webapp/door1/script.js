@@ -1,10 +1,18 @@
 cctv_link = 'ws://192.168.0.20:9999'
+fetch_link = 'http://192.168.0.20:8888/'
 
 function select(num) {
     document.getElementById("audio").src = './uploads/result' + num + '.wav'
 }
 
-doShow1()
+$('#cc').hide(); 
+$('#bb').hide();
+$('#aa').show();
+var client = new WebSocket(cctv_link);
+var canvas = document.querySelector('canvas');
+var player = new jsmpeg(client, {
+    canvas: canvas
+});
 
 function doShow1(){
     if ($('#aa').is(":visible")) { 
@@ -42,7 +50,7 @@ function doShow3(){
     } 
 }
 window.onload = function() {
-
+    fetch(fetch_link,"upload_door");
     for (i=0; i<10; i++) {
         file = "./uploads/name" + i + ".txt";
         var rawFile = new XMLHttpRequest();

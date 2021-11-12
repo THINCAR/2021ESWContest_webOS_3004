@@ -1,6 +1,6 @@
 var bath_link = "http://192.168.0.45/"
 var heat_link = "http://192.168.0.35/"
-var auth_link = "http://192.168.0.21:8888/";
+var auth_link = "http://192.168.0.85:8888/";
 
 let sidebar = document.querySelector(".sidebar");
 let bathSwitch = document.querySelector("#bath_onoff")
