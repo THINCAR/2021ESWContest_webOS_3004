@@ -1,5 +1,5 @@
-cctv_link = 'ws://192.168.0.20:9999'
-fetch_link = 'http://192.168.0.20:8888/'
+cctv_link = 'ws://192.168.55.126:9999'
+fetch_link = 'http://192.168.55.126:8888/'
 
 function select(num) {
     document.getElementById("audio").src = './uploads/result' + num + '.wav'
