@@ -4,7 +4,7 @@ THINCAR
 ### 작품명   
 THINCAR의 움직이는 Smart Home  
 ### 제품 시연 동영상
-Link : [YOUTUBE](https://www.youtube.com/watch?v=7USkTjFd8rU&t=93s)
+Link : [YOUTUBE](https://www.youtube.com/watch?v=FfYQBBg1iSo)
 ### 작품설명   
 1. 1인 가구의 불편함을 개선할 수 있는 운전자 편의기능 제공
 2. 대시보드에서 스마트 홈 IoT 기기를 제어할 수 있는 다양한 환경 제공
